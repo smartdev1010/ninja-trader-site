@@ -1,0 +1,974 @@
+﻿<!DOCTYPE HTML>
+<html>
+<!-- Mirrored from ninjatrader.com/support/helpGuides/nt8/nt8_kwindex.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Jan 2023 20:02:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+   <title>NinjaTrader 8</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+   <!-- This line includes the general project style sheet (not required) -->
+   <link type="text/css" href="default.css" rel="stylesheet" />
+    <style type="text/css">
+    .idxsection {
+      font-size: 22pt;
+      font-weight: bold;
+      color: #a41e22;
+      padding-top: 25px;   
+      border-bottom: solid 1px #dddddd; 
+    }
+    p.idxkeyword:nth-child(odd) {
+      background-color: #f9f9f9;     
+      padding: 10px;
+      border: solid 1px #dddddd;
+      border-top-width: 0px !important;
+     
+    }
+    p.idxkeyword:nth-child(even) {  
+      background-color: #ffffff;
+      padding: 10px;
+      border: solid 1px #dddddd;
+      border-top-width: 0px !important;
+    }        
+    </style>    
+
+  <!--
+   <style type="text/css">    
+       body { background:#FFF; }
+       .navbar      { font-size: 120% }
+
+       #idx          { margin: 0; padding: 0 }     /* div tag that wraps the keyword index */
+       #idx a        { color: #000; text-decoration: none }  /* all links in index appear as text */
+
+       #idx p             { margin: 2px }        /* keywords and secondary keywords */
+       #idx p.idxkeyword2 { margin-left: 20px }  /* indentation for secondary keywords */
+
+       table.idxtable { background: #F4F4F4;
+                        border: 1px solid #000000;
+                        border-collapse: collapse;
+                        -moz-box-shadow: 2px 2px 2px #B0B0B0;
+                        -webkit-box-shadow: 2px 2px 2px #B0B0B0;
+                        box-shadow: 2px 2px 2px #B0B0B0;
+                        filter: progid:DXImageTransform.Microsoft.Shadow(color=B0B0B0, Direction=135, Strength=4); }
+       td.idxtable    { background: #F4F4F4 }
+
+       /* font definitions for keyword section, keywords and popup links */
+       .idxsection  { font-family: Arial,Helvetica; font-weight: bold; font-size: 14pt; color: #000000; text-decoration: none;
+                      margin-top: 15px; margin-bottom: 15px; }
+       .idxkeyword  { font-family: Arial,Helvetica; font-weight: normal; font-size: 10pt; color: #000000; text-decoration: none; }
+       .idxkeyword2 { font-family: Arial,Helvetica; font-weight: normal; font-size: 10pt; color: #000000; text-decoration: none; }  
+       .idxlink     { font-family: Arial,Helvetica; font-weight: normal; font-size: 9pt; color: #000000; text-decoration: none; }
+                                                                                                                                  
+   </style> -->
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="nt8_contextids.js"></script>
+</head>
+<body>
+<div id="abc" style="font-size: 18pt;">
+<a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> <a href="#F">F</a> <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> J <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> <a href="#N">N</a> <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> <a href="#U">U</a> <a href="#V">V</a> <a href="#W">W</a> <a href="#X">X</a> <a href="#Y">Y</a> <a href="#Z">Z</a> 
+</div>
+<p>
+<script type="text/javascript">
+
+  function hmInitHideLinks(cssCode) {
+  	var styleElement = document.createElement("style");
+  	styleElement.type = "text/css";
+  	if (styleElement.styleSheet) {
+    	styleElement.styleSheet.cssText = cssCode;
+  	}
+  	else {
+    	styleElement.appendChild(document.createTextNode(cssCode));
+  	}
+  	document.getElementsByTagName("head")[0].appendChild(styleElement);
+  }
+
+  hmInitHideLinks("#idx div { display: none }");
+
+  var currentdiv = null;
+  var canhidelinks = true;
+
+  function hmshowLinks(divID) {
+    var thisdiv = document.getElementById(divID);
+    canhidelinks = true;
+    hmhideLinks();
+    if (thisdiv) {
+      currentdiv = thisdiv;
+      $(currentdiv).show();
+      $(currentdiv).mouseover(hmdivMouseOver).mouseout(hmdivMouseOut);
+      $(document).mouseup(hmhideLinks);
+    }
+  }
+  function hmdivMouseOver() { canhidelinks = false; };
+  function hmdivMouseOut() { canhidelinks = true; };
+  function hmhideLinks() {
+    if (canhidelinks) {
+      if (currentdiv) {
+        $(currentdiv).hide();
+        $(currentdiv).unbind("onmouseover", "onmouseout");
+      }
+      currentdiv = null;
+      $(document).unbind("onmouseup");
+    }
+  }
+function getText(obj) {
+  return (obj.innerText ? obj.innerText : obj.textContent);
+}
+function trackidx(obj) {
+  var akeyword = "";
+  while (obj.className != "idxkeyword") {
+    if (obj.previousSibling == null)
+      { obj = obj.parentNode; }
+    else
+      { obj = obj.previousSibling; }
+    if (obj.className == "idxkeyword2") { akeyword = getText(obj); }
+    if (obj.className == "idxkeyword") { akeyword = ((akeyword=="") ? getText(obj) : getText(obj) + ":" + akeyword); }
+  }
+  if (parent.frames.length>0) {
+    if (parent.gaaccount) { parent.track("index", akeyword); }
+  }
+}
+
+</script>
+<div id="idx" style="margin:0;padding:0;border:none">
+<a name="A" id="A"></a><p class="idxsection">- A -</p>
+<p class="idxkeyword"><a href="account_class.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Account - AddOn</span></a></p>
+<p class="idxkeyword"><a href="accountitem.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AccountItem</span></a></p>
+<p class="idxkeyword"><a href="accountitemeventargs.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AccountItemEventArgs</span></a></p>
+<p class="idxkeyword"><a href="accountitemupdate.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AccountItemUpdate</span></a></p>
+<p class="idxkeyword"><a href="accountselector.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AccountSelector</span></a></p>
+<p class="idxkeyword"><a href="accountstatusupdate.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AccountStatusUpdate</span></a></p>
+<p class="idxkeyword"><a href="accumulation_distribution_adl.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Accumulation/Distribution (ADL)</span></a></p>
+<p class="idxkeyword"><a href="actualsessionbegin.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ActualSessionBegin</span></a></p>
+<p class="idxkeyword"><a href="actualsessionend.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ActualSessionEnd</span></a></p>
+<p class="idxkeyword"><a href="actualtradingdayendlocal.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ActualTradingDayEndLocal</span></a></p>
+<p class="idxkeyword"><a href="actualtradingdayexchange.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ActualTradingDayExchange</span></a></p>
+<p class="idxkeyword"><a href="adaptive_price_zone_apz.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Adaptive Price Zone (APZ)</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k13')"><span class="idxkeyword">AddBar()</span></a></p>
+<div id="k13" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="addbar.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">AddBar()</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="removelastbar.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">RemoveLastBar()</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="addchartindicator.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AddChartIndicator()</span></a></p>
+<p class="idxkeyword"><a href="adddataseries.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AddDataSeries()</span></a></p>
+<p class="idxkeyword"><a href="addheikenashi.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AddHeikenAshi()</span></a></p>
+<p class="idxkeyword"><a href="addkagi.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AddKagi()</span></a></p>
+<p class="idxkeyword"><a href="addline.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AddLine()</span></a></p>
+<p class="idxkeyword"><a href="addlinebreak.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AddLineBreak()</span></a></p>
+<p class="idxkeyword"><a href="addpastedoffset.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AddPastedOffset()</span></a></p>
+<p class="idxkeyword"><a href="addperformancemetric.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AddPerformanceMetric()</span></a></p>
+<p class="idxkeyword"><a href="addplot.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AddPlot()</span></a></p>
+<p class="idxkeyword"><a href="addpointandfigure.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AddPointAndFigure()</span></a></p>
+<p class="idxkeyword"><a href="addrenko.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AddRenko()</span></a></p>
+<p class="idxkeyword"><a href="alert.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Alert() - Alert, Debug, Share</span></a></p>
+<p class="idxkeyword"><a href="allowremovalofdrawobjects.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AllowRemovalOfDrawObjects</span></a></p>
+<p class="idxkeyword"><a href="alltrades.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AllTrades</span></a></p>
+<p class="idxkeyword"><a href="anchors.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Anchors</span></a></p>
+<p class="idxkeyword"><a href="andrewspitchfork.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AndrewsPitchfork</span></a></p>
+<p class="idxkeyword"><a href="applydefaultbaseperiodvalue.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ApplyDefaultBasePeriodValue</span></a></p>
+<p class="idxkeyword"><a href="applydefaultvalue.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ApplyDefaultValue</span></a></p>
+<p class="idxkeyword"><a href="arc.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Arc</span></a></p>
+<p class="idxkeyword"><a href="arelinesconfigurable.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AreLinesConfigurable</span></a></p>
+<p class="idxkeyword"><a href="areplotsconfigurable.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ArePlotsConfigurable</span></a></p>
+<p class="idxkeyword"><a href="aroon.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Aroon</span></a></p>
+<p class="idxkeyword"><a href="aroon_oscillator.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Aroon Oscillator</span></a></p>
+<p class="idxkeyword"><a href="arrowdown.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ArrowDown</span></a></p>
+<p class="idxkeyword"><a href="arrowline.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ArrowLine</span></a></p>
+<p class="idxkeyword"><a href="arrowup.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ArrowUp</span></a></p>
+<p class="idxkeyword"><a href="atmstrategy.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AtmStrategy</span></a></p>
+<p class="idxkeyword"><a href="atmstrategycancelentryorder.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AtmStrategyCancelEntryOrder()</span></a></p>
+<p class="idxkeyword"><a href="atmstrategychangeentryorder.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AtmStrategyChangeEntryOrder()</span></a></p>
+<p class="idxkeyword"><a href="atmstrategychangestoptarget.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AtmStrategyChangeStopTarget()</span></a></p>
+<p class="idxkeyword"><a href="atmstrategyclose.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AtmStrategyClose()</span></a></p>
+<p class="idxkeyword"><a href="atmstrategycreate.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AtmStrategyCreate()</span></a></p>
+<p class="idxkeyword"><a href="atmstrategyselector.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AtmStrategySelector</span></a></p>
+<p class="idxkeyword"><a href="attachedto.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AttachedTo</span></a></p>
+<p class="idxkeyword"><a href="average_directional_index_adx.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Average Directional Index (ADX)</span></a></p>
+<p class="idxkeyword"><a href="average_directional_movement_r.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Average Directional Movement Rating (ADXR)</span></a></p>
+<p class="idxkeyword"><a href="average_true_range_atr.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Average True Range (ATR)</span></a></p>
+<p class="idxkeyword"><a href="averagebarsintrade.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AverageBarsInTrade</span></a></p>
+<p class="idxkeyword"><a href="averageentryefficiency.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AverageEntryEfficiency</span></a></p>
+<p class="idxkeyword"><a href="averageetd.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AverageEtd</span></a></p>
+<p class="idxkeyword"><a href="averageexitefficiency.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AverageExitEfficiency</span></a></p>
+<p class="idxkeyword"><a href="averagemae.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AverageMae</span></a></p>
+<p class="idxkeyword"><a href="averagemfe.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AverageMfe</span></a></p>
+<p class="idxkeyword"><a href="position_averageprice.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AveragePrice - Position</span></a></p>
+<p class="idxkeyword"><a href="positionaccount_averageprice.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AveragePrice - PositionAccount</span></a></p>
+<p class="idxkeyword"><a href="averageprofit.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AverageProfit</span></a></p>
+<p class="idxkeyword"><a href="averagetimeinmarket.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AverageTimeInMarket</span></a></p>
+<p class="idxkeyword"><a href="averagetotalefficiency.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AverageTotalEfficiency</span></a></p>
+<p class="idxkeyword"><a href="axisxheight.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AxisXHeight - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="axisyleftwidth.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AxisYLeftWidth - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="axisyrightwidth.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">AxisYRightWidth - ChartControl</span></a></p>
+<a name="B" id="B"></a><p class="idxsection">- B -</p>
+<p class="idxkeyword"><a href="backbrush.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BackBrush</span></a></p>
+<p class="idxkeyword"><a href="backbrushall.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BackBrushAll</span></a></p>
+<p class="idxkeyword"><a href="backbrushes.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BackBrushes</span></a></p>
+<p class="idxkeyword"><a href="backbrushesall.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BackBrushesAll</span></a></p>
+<p class="idxkeyword"><a href="balance_of_power_bop.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Balance of Power (BOP)</span></a></p>
+<p class="idxkeyword"><a href="barbrush.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BarBrush</span></a></p>
+<p class="idxkeyword"><a href="barbrushes.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BarBrushes</span></a></p>
+<p class="idxkeyword"><a href="barmarginleft.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BarMarginLeft - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="bars.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Bars</span></a></p>
+<p class="idxkeyword"><a href="chartbars_bars.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Bars - ChartBars</span></a></p>
+<p class="idxkeyword"><a href="barsarray.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BarsArray</span></a></p>
+<p class="idxkeyword"><a href="chartcontrol_barsarray.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BarsArray - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="barsinprogress.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BarsInProgress</span></a></p>
+<p class="idxkeyword"><a href="barspacingtype.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BarSpacingType - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="barsperiod.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BarsPeriod</span></a></p>
+<p class="idxkeyword"><a href="chartcontrol_barsperiod.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BarsPeriod - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="iintervalprovider_barsperiod.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BarsPeriod - IIntervalProvider</span></a></p>
+<p class="idxkeyword"><a href="barsperiods.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BarsPeriods</span></a></p>
+<p class="idxkeyword"><a href="barsrequest.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BarsRequest - Add On</span></a></p>
+<p class="idxkeyword"><a href="barsrequiredtoplot.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BarsRequiredToPlot</span></a></p>
+<p class="idxkeyword"><a href="barsrequiredtotrade.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BarsRequiredToTrade</span></a></p>
+<p class="idxkeyword"><a href="barssinceentryexecution.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BarsSinceEntryExecution()</span></a></p>
+<p class="idxkeyword"><a href="barssinceexitexecution.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BarsSinceExitExecution()</span></a></p>
+<p class="idxkeyword"><a href="barssincenewtradingday.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BarsSinceNewTradingDay - Bars</span></a></p>
+<p class="idxkeyword"><a href="barwidth.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BarWidth - Chart Style</span></a></p>
+<p class="idxkeyword"><a href="chartcontrol_barwidth.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BarWidth - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="barwidtharray.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BarWidthArray - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="barwidthui.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BarWidthUI - Chart Style</span></a></p>
+<p class="idxkeyword"><a href="bollinger_bands.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Bollinger Bands</span></a></p>
+<p class="idxkeyword"><a href="browsableattribute.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BrowsableAttribute - Attributes</span></a></p>
+<p class="idxkeyword"><a href="brushes.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Brushes</span></a></p>
+<p class="idxkeyword"><a href="buysellpressure.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BuySell Pressure</span></a></p>
+<p class="idxkeyword"><a href="buysellvolume.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">BuySell Volume</span></a></p>
+<a name="C" id="C"></a><p class="idxsection">- C -</p>
+<p class="idxkeyword"><a href="calculate.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Calculate</span></a></p>
+<p class="idxkeyword"><a href="calculatetradingday.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CalculateTradingDay()</span></a></p>
+<p class="idxkeyword"><a href="cancel.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Cancel() - Account</span></a></p>
+<p class="idxkeyword"><a href="accounts_cancelallorders.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CancelAllOrders() - Account</span></a></p>
+<p class="idxkeyword"><a href="connection_cancelallorders.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CancelAllOrders() - Connections</span></a></p>
+<p class="idxkeyword"><a href="managed_cancelorder.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CancelOrder() - Managed</span></a></p>
+<p class="idxkeyword"><a href="unmanaged_cancelorder.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CancelOrder() - Unmanaged</span></a></p>
+<p class="idxkeyword"><a href="candleoutlinebrush.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CandleOutlineBrush</span></a></p>
+<p class="idxkeyword"><a href="candleoutlinebrushes.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CandleOutlineBrushes</span></a></p>
+<p class="idxkeyword"><a href="candlestickpattern.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CandleStickPattern</span></a></p>
+<p class="idxkeyword"><a href="canvasleft.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CanvasLeft - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="canvasright.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CanvasRight - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="canvaszoomstate.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CanvasZoomState - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="categoryorderattribute.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CategoryOrderAttribute - Attributes</span></a></p>
+<p class="idxkeyword"><a href="chaikin_money_flow.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Chaikin Money Flow</span></a></p>
+<p class="idxkeyword"><a href="chaikin_oscillator.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Chaikin Oscillator</span></a></p>
+<p class="idxkeyword"><a href="chaikin_volatility.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Chaikin Volatility</span></a></p>
+<p class="idxkeyword"><a href="chande_momentum_oscillator_cmo.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Chande Momentum Oscillator (CMO)</span></a></p>
+<p class="idxkeyword"><a href="change.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Change() - Account</span></a></p>
+<p class="idxkeyword"><a href="managed_changeorder.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ChangeOrder() - Managed</span></a></p>
+<p class="idxkeyword"><a href="unmanaged_changeorder.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ChangeOrder() - Unmanaged</span></a></p>
+<p class="idxkeyword"><a href="characterlimit.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CharacterLimit</span></a></p>
+<p class="idxkeyword"><a href="charactersreservedpermedia.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CharactersReservedPerMedia</span></a></p>
+<p class="idxkeyword"><a href="chartanchor.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ChartAnchor</span></a></p>
+<p class="idxkeyword"><a href="chartindicators.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ChartIndicators</span></a></p>
+<p class="idxkeyword"><a href="chartobjects.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ChartObjects - ChartPanel</span></a></p>
+<p class="idxkeyword"><a href="chartpanels.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ChartPanels - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="chartstyletype.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ChartStyleType - Chart Style</span></a></p>
+<p class="idxkeyword"><a href="clearoutputwindow.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ClearOutputWindow() - Alert, Debug, Share</span></a></p>
+<p class="idxkeyword"><a href="clone.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Clone() - NinjaScript</span></a></p>
+<p class="idxkeyword"><a href="close.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Close</span></a></p>
+<p class="idxkeyword"><a href="closes.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Closes</span></a></p>
+<p class="idxkeyword"><a href="closestrategy.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CloseStrategy()</span></a></p>
+<p class="idxkeyword"><a href="commodity_channel_index_cci.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Commodity Channel Index (CCI)</span></a></p>
+<p class="idxkeyword"><a href="compare.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Compare()</span></a></p>
+<p class="idxkeyword"><a href="connect.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Connect()</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k134')"><span class="idxkeyword">Connection - Account</span></a></p>
+<div id="k134" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="connection.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Connection</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="denomination.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Denomination</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="connection_class.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Connection - AddOn</span></a></p>
+<p class="idxkeyword"><a href="connectionlosshandling.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ConnectionLossHandling</span></a></p>
+<p class="idxkeyword"><a href="connectionstatuseventargs.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ConnectionStatusEventArgs</span></a></p>
+<p class="idxkeyword"><a href="connectionstatusupdate.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ConnectionStatusUpdate</span></a></p>
+<p class="idxkeyword"><a href="connectoptions.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ConnectOptions</span></a></p>
+<p class="idxkeyword"><a href="converttoverticalpixels.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ConvertToVerticalPixels()</span></a></p>
+<p class="idxkeyword"><a href="copydatavalues.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CopyDataValues()</span></a></p>
+<p class="idxkeyword"><a href="count.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Count - Bars</span></a></p>
+<p class="idxkeyword"><a href="chartbars_count.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Count - ChartBars</span></a></p>
+<p class="idxkeyword"><a href="iseries_count.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Count - ISeries&lt;T&gt;</span></a></p>
+<p class="idxkeyword"><a href="tradecollection_tradescount.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Count - Trade Collection</span></a></p>
+<p class="idxkeyword"><a href="countif.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CountIf() - Analytical</span></a></p>
+<p class="idxkeyword"><a href="createanchor.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CreateAnchor()</span></a></p>
+<p class="idxkeyword"><a href="createorder.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CreateOrder()</span></a></p>
+<p class="idxkeyword"><a href="createparentwindow.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CreateParentWindow()</span></a></p>
+<p class="idxkeyword"><a href="createtabpage.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CreateTabPage()</span></a></p>
+<p class="idxkeyword"><a href="crossabove.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CrossAbove() - Analytical</span></a></p>
+<p class="idxkeyword"><a href="crossbelow.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CrossBelow() - Analytical</span></a></p>
+<p class="idxkeyword"><a href="crosshairtype.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CrosshairType - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="cumprofit.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CumProfit</span></a></p>
+<p class="idxkeyword"><a href="masterinstrument_currency.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Currency - MasterInstrument</span></a></p>
+<p class="idxkeyword"><a href="currency.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Currency - TradesPerformance</span></a></p>
+<p class="idxkeyword"><a href="current_day_ohl.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Current Day OHL</span></a></p>
+<p class="idxkeyword"><a href="currentbar.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CurrentBar</span></a></p>
+<p class="idxkeyword"><a href="currentbars.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CurrentBars</span></a></p>
+<p class="idxkeyword"><a href="currenttext.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CurrentText - Market Analyzer Column</span></a></p>
+<p class="idxkeyword"><a href="currentvalue.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">CurrentValue - Market Analyzer Column</span></a></p>
+<a name="D" id="D"></a><p class="idxsection">- D -</p>
+<p class="idxkeyword"><a href="darvas.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Darvas</span></a></p>
+<p class="idxkeyword"><a href="datatype.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">DataType - Market Analyzer Column</span></a></p>
+<p class="idxkeyword"><a href="daystoload.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">DaysToLoad</span></a></p>
+<p class="idxkeyword"><a href="defaultquantity.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">DefaultQuantity</span></a></p>
+<p class="idxkeyword"><a href="masterinstrument_description.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Description</span></a></p>
+<p class="idxkeyword"><a href="description.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Description - NinjaScript</span></a></p>
+<p class="idxkeyword"><a href="diamond.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Diamond</span></a></p>
+<p class="idxkeyword"><a href="directional_movement_dm.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Directional Movement (DM)</span></a></p>
+<p class="idxkeyword"><a href="directional_movement_index_dmi.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Directional Movement Index (DMI)</span></a></p>
+<p class="idxkeyword"><a href="disconnect.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Disconnect() - Connections</span></a></p>
+<p class="idxkeyword"><a href="disconnectdelayseconds.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">DisconnectDelaySeconds</span></a></p>
+<p class="idxkeyword"><a href="displacement.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Displacement</span></a></p>
+<p class="idxkeyword"><a href="displayattribute.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">DisplayAttribute - Attributes</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k175')"><span class="idxkeyword">DisplayInDataBox</span></a></p>
+<div id="k175" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="displayindatabox.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">DisplayInDataBox</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="showtransparentplotsindatabox.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">ShowTransparentPlotsInDataBox</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="displayname.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">DisplayName - ChartAnchor</span></a></p>
+<p class="idxkeyword"><a href="indicator_displayname.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">DisplayName - NinjaScript</span></a></p>
+<p class="idxkeyword"><a href="displayonchartsmenus.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">DisplayOnChartsMenus</span></a></p>
+<p class="idxkeyword"><a href="dispose.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Dispose()</span></a></p>
+<p class="idxkeyword"><a href="dividends.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Dividends</span></a></p>
+<p class="idxkeyword"><a href="donchian_channel.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Donchian Channel</span></a></p>
+<p class="idxkeyword"><a href="dot.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Dot</span></a></p>
+<p class="idxkeyword"><a href="double_stochastics.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Double Stochastics</span></a></p>
+<p class="idxkeyword"><a href="downbrush.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">DownBrush - Chart Style</span></a></p>
+<p class="idxkeyword"><a href="downbrushdx.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">DownBrushDX - Chart Style</span></a></p>
+<p class="idxkeyword"><a href="draw_andrewspitchfork.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.AndrewsPitchfork()</span></a></p>
+<p class="idxkeyword"><a href="draw_arc.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.Arc()</span></a></p>
+<p class="idxkeyword"><a href="draw_arrowdown.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.ArrowDown()</span></a></p>
+<p class="idxkeyword"><a href="draw_arrowline.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.ArrowLine()</span></a></p>
+<p class="idxkeyword"><a href="draw_arrowup.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.ArrowUp()</span></a></p>
+<p class="idxkeyword"><a href="draw_diamond.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.Diamond()</span></a></p>
+<p class="idxkeyword"><a href="draw_dot.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.Dot()</span></a></p>
+<p class="idxkeyword"><a href="draw_ellipse.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.Ellipse()</span></a></p>
+<p class="idxkeyword"><a href="draw_extendedline.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.ExtendedLine()</span></a></p>
+<p class="idxkeyword"><a href="draw_fibonaccicircle.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.FibonacciCircle()</span></a></p>
+<p class="idxkeyword"><a href="draw_fibonacciextensions.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.FibonacciExtensions()</span></a></p>
+<p class="idxkeyword"><a href="draw_fibonacciretracements.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.FibonacciRetracements()</span></a></p>
+<p class="idxkeyword"><a href="draw_fibonaccitimeextensions.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.FibonacciTimeExtensions()</span></a></p>
+<p class="idxkeyword"><a href="draw_gannfan.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.GannFan()</span></a></p>
+<p class="idxkeyword"><a href="draw_horizontalline.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.HorizontalLine()</span></a></p>
+<p class="idxkeyword"><a href="draw_line.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.Line()</span></a></p>
+<p class="idxkeyword"><a href="draw_ray.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.Ray()</span></a></p>
+<p class="idxkeyword"><a href="draw_rectangle.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.Rectangle()</span></a></p>
+<p class="idxkeyword"><a href="draw_region.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.Region()</span></a></p>
+<p class="idxkeyword"><a href="draw_regionhighlightx.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.RegionHighlightX()</span></a></p>
+<p class="idxkeyword"><a href="draw_regionhighlighty.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.RegionHighlightY()</span></a></p>
+<p class="idxkeyword"><a href="draw_regressionchannel.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.RegressionChannel()</span></a></p>
+<p class="idxkeyword"><a href="draw_riskreward.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.RiskReward()</span></a></p>
+<p class="idxkeyword"><a href="draw_ruler.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.Ruler()</span></a></p>
+<p class="idxkeyword"><a href="draw_square.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.Square()</span></a></p>
+<p class="idxkeyword"><a href="draw_text.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.Text()</span></a></p>
+<p class="idxkeyword"><a href="draw_textfixed.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.TextFixed()</span></a></p>
+<p class="idxkeyword"><a href="draw_trendchannel.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.TrendChannel()</span></a></p>
+<p class="idxkeyword"><a href="draw_triangle.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.Triangle()</span></a></p>
+<p class="idxkeyword"><a href="draw_triangledown.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.TriangleDown()</span></a></p>
+<p class="idxkeyword"><a href="draw_triangleup.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.TriangleUp()</span></a></p>
+<p class="idxkeyword"><a href="draw_verticalline.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Draw.VerticalLine()</span></a></p>
+<p class="idxkeyword"><a href="drawdown.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Drawdown</span></a></p>
+<p class="idxkeyword"><a href="drawhorizontalgridlines.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">DrawHorizontalGridLines</span></a></p>
+<p class="idxkeyword"><a href="drawingstate.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">DrawingState</span></a></p>
+<p class="idxkeyword"><a href="drawingtool.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">DrawingTool</span></a></p>
+<p class="idxkeyword"><a href="drawline2.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">DrawLine() - RenderTarget</span></a></p>
+<p class="idxkeyword"><a href="drawnby.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">DrawnBy</span></a></p>
+<p class="idxkeyword"><a href="drawnonbar.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">DrawnOnBar</span></a></p>
+<p class="idxkeyword"><a href="drawingtools_drawobjects.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">DrawObjects</span></a></p>
+<p class="idxkeyword"><a href="drawonpricepanel.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">DrawOnPricePanel</span></a></p>
+<p class="idxkeyword"><a href="drawrectangle2.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">DrawRectangle() - RenderTarget</span></a></p>
+<p class="idxkeyword"><a href="drawverticalgridlines.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">DrawVerticalGridLines</span></a></p>
+<p class="idxkeyword"><a href="dynamic_momentum_index_dmindex.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Dynamic Momentum Index (DMIndex)</span></a></p>
+<a name="E" id="E"></a><p class="idxsection">- E -</p>
+<p class="idxkeyword"><a href="ease_of_movement.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Ease of Movement</span></a></p>
+<p class="idxkeyword"><a href="ellipse.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Ellipse</span></a></p>
+<p class="idxkeyword"><a href="enterlong.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">EnterLong()</span></a></p>
+<p class="idxkeyword"><a href="enterlonglimit.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">EnterLongLimit()</span></a></p>
+<p class="idxkeyword"><a href="enterlongmit.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">EnterLongMIT()</span></a></p>
+<p class="idxkeyword"><a href="enterlongstoplimit.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">EnterLongStopLimit()</span></a></p>
+<p class="idxkeyword"><a href="enterlongstopmarket.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">EnterLongStopMarket()</span></a></p>
+<p class="idxkeyword"><a href="entershort.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">EnterShort()</span></a></p>
+<p class="idxkeyword"><a href="entershortlimit.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">EnterShortLimit()</span></a></p>
+<p class="idxkeyword"><a href="entershortmit.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">EnterShortMIT()</span></a></p>
+<p class="idxkeyword"><a href="entershortstoplimit.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">EnterShortStopLimit()</span></a></p>
+<p class="idxkeyword"><a href="entershortstopmarket.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">EnterShortStopMarket()</span></a></p>
+<p class="idxkeyword"><a href="entriesperdirection.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">EntriesPerDirection</span></a></p>
+<p class="idxkeyword"><a href="entryhandling.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">EntryHandling</span></a></p>
+<p class="idxkeyword"><a href="eventrades.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">EvenTrades</span></a></p>
+<p class="idxkeyword"><a href="exchange.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Exchange</span></a></p>
+<p class="idxkeyword"><a href="exchanges.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Exchanges</span></a></p>
+<p class="idxkeyword"><a href="execution.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Execution</span></a></p>
+<p class="idxkeyword"><a href="executions.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Executions - Account</span></a></p>
+<p class="idxkeyword"><a href="executionupdate.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ExecutionUpdate</span></a></p>
+<p class="idxkeyword"><a href="exitlong.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ExitLong()</span></a></p>
+<p class="idxkeyword"><a href="exitlonglimit.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ExitLongLimit()</span></a></p>
+<p class="idxkeyword"><a href="exitlongmit.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ExitLongMIT()</span></a></p>
+<p class="idxkeyword"><a href="exitlongstoplimit.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ExitLongStopLimit()</span></a></p>
+<p class="idxkeyword"><a href="exitlongstopmarket.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ExitLongStopMarket()</span></a></p>
+<p class="idxkeyword"><a href="exitonsessioncloseseconds.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ExitOnSessionCloseSeconds</span></a></p>
+<p class="idxkeyword"><a href="exitshort.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ExitShort()</span></a></p>
+<p class="idxkeyword"><a href="exitshortlimit.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ExitShortLimit()</span></a></p>
+<p class="idxkeyword"><a href="exitshortmit.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ExitShortMIT()</span></a></p>
+<p class="idxkeyword"><a href="exitshortstoplimit.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ExitShortStopLimit()</span></a></p>
+<p class="idxkeyword"><a href="exitshortstopmarket.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ExitShortStopMarket()</span></a></p>
+<p class="idxkeyword"><a href="expiry.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Expiry</span></a></p>
+<p class="idxkeyword"><a href="extendedline.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ExtendedLine</span></a></p>
+<a name="F" id="F"></a><p class="idxsection">- F -</p>
+<p class="idxkeyword"><a href="fibonaccicircle.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">FibonacciCircle</span></a></p>
+<p class="idxkeyword"><a href="fibonacciextensions.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">FibonacciExtensions</span></a></p>
+<p class="idxkeyword"><a href="fibonacciretracements.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">FibonacciRetracements</span></a></p>
+<p class="idxkeyword"><a href="fibonaccitimeextensions.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">FibonacciTimeExtensions</span></a></p>
+<p class="idxkeyword"><a href="fillrectangle.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">FillRectangle - RenderTarget</span></a></p>
+<p class="idxkeyword"><a href="isfirsttickofbar.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">FirstTickOfBar</span></a></p>
+<p class="idxkeyword"><a href="firsttimepainted.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">FirstTimePainted - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="fisher_transform.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Fisher Transform</span></a></p>
+<p class="idxkeyword"><a href="flatten.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Flatten()</span></a></p>
+<p class="idxkeyword"><a href="forcerefresh.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ForceRefresh() - Rendering</span></a></p>
+<p class="idxkeyword"><a href="forecast_oscillator_fosc.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Forecast Oscillator (FOSC)</span></a></p>
+<p class="idxkeyword"><a href="format.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Format()</span></a></p>
+<p class="idxkeyword"><a href="formatdecimals.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">FormatDecimals - Market Analyzer Column</span></a></p>
+<p class="idxkeyword"><a href="formatprice.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">FormatPrice()</span></a></p>
+<p class="idxkeyword"><a href="formatpricemarker.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">FormatPriceMarker() - Charts</span></a></p>
+<p class="idxkeyword"><a href="chartbars_fromindex.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">FromIndex - ChartBars</span></a></p>
+<p class="idxkeyword"><a href="instrument_fullname.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">FullName</span></a></p>
+<p class="idxkeyword"><a href="fundamentaldata.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">FundamentalData</span></a></p>
+<p class="idxkeyword"><a href="fundamentaldataeventargs.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">FundamentalDataEventArgs</span></a></p>
+<a name="G" id="G"></a><p class="idxsection">- G -</p>
+<p class="idxkeyword"><a href="gannfan.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GannFan</span></a></p>
+<p class="idxkeyword"><a href="get.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Get()</span></a></p>
+<p class="idxkeyword"><a href="getask.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetAsk() - Bars</span></a></p>
+<p class="idxkeyword"><a href="getatmstrategyentryorderstatus.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetAtmStrategyEntryOrderStatus()</span></a></p>
+<p class="idxkeyword"><a href="getatmstrategymarketposition.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetAtmStrategyMarketPosition()</span></a></p>
+<p class="idxkeyword"><a href="getatmstrategypositionaveragep.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetAtmStrategyPositionAveragePrice()</span></a></p>
+<p class="idxkeyword"><a href="getatmstrategypositionquantity.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetAtmStrategyPositionQuantity()</span></a></p>
+<p class="idxkeyword"><a href="getatmstrategyrealizedprofitlo.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetAtmStrategyRealizedProfitLoss()</span></a></p>
+<p class="idxkeyword"><a href="getatmstrategystoptargetorders.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetAtmStrategyStopTargetOrderStatus()</span></a></p>
+<p class="idxkeyword"><a href="getatmstrategyuniqueid.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetAtmStrategyUniqueId()</span></a></p>
+<p class="idxkeyword"><a href="getatmstrategyunrealizedprofit.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetAtmStrategyUnrealizedProfitLoss()</span></a></p>
+<p class="idxkeyword"><a href="getattachedtochartbars.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetAttachedToChartBars()</span></a></p>
+<p class="idxkeyword"><a href="getbar.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetBar() - Bars</span></a></p>
+<p class="idxkeyword"><a href="chartbars_getbaridxbytime.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetBarIdxByTime() - ChartBars</span></a></p>
+<p class="idxkeyword"><a href="chartbars_getbaridxbyx.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetBarIdxByX() - ChartBars</span></a></p>
+<p class="idxkeyword"><a href="getbarpaintwidth.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetBarPaintWidth() - Chart Style</span></a></p>
+<p class="idxkeyword"><a href="chartcontrol_getbarpaintwidth.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetBarPaintWidth() - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="getbid.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetBid() - Bars</span></a></p>
+<p class="idxkeyword"><a href="getclose.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetClose() - Bars</span></a></p>
+<p class="idxkeyword"><a href="getclosestanchor.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetClosestAnchor()</span></a></p>
+<p class="idxkeyword"><a href="getcurrentask.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetCurrentAsk() - Analytical</span></a></p>
+<p class="idxkeyword"><a href="getcurrentaskvolume.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetCurrentAskVolume() - Analytical</span></a></p>
+<p class="idxkeyword"><a href="getcurrentbid.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetCurrentBid() - Analytical</span></a></p>
+<p class="idxkeyword"><a href="getcurrentbidvolume.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetCurrentBidVolume() - Analytical</span></a></p>
+<p class="idxkeyword"><a href="getcursor.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetCursor()</span></a></p>
+<p class="idxkeyword"><a href="getdaybar.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetDayBar() - Bars</span></a></p>
+<p class="idxkeyword"><a href="getheaderpart.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetHeaderPart()</span></a></p>
+<p class="idxkeyword"><a href="gethigh.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetHigh() - Bars</span></a></p>
+<p class="idxkeyword"><a href="getinitiallookbackdays.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetInitialLookBackDays()</span></a></p>
+<p class="idxkeyword"><a href="getinstrument.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetInstrument()</span></a></p>
+<p class="idxkeyword"><a href="getlow.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetLow() - Bars</span></a></p>
+<p class="idxkeyword"><a href="getmedian.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetMedian() - Analytical</span></a></p>
+<p class="idxkeyword"><a href="getnextexpiry.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetNextExpiry()</span></a></p>
+<p class="idxkeyword"><a href="getnextsession.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetNextSession()</span></a></p>
+<p class="idxkeyword"><a href="getopen.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetOpen() - Bars</span></a></p>
+<p class="idxkeyword"><a href="getpercentcomplete.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetPercentComplete()</span></a></p>
+<p class="idxkeyword"><a href="getpixelsfordistance.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetPixelsForDistance() - ChartScale</span></a></p>
+<p class="idxkeyword"><a href="getpoint.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetPoint()</span></a></p>
+<p class="idxkeyword"><a href="getprevioustradingdayend.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetPreviousTradingDayEnd()</span></a></p>
+<p class="idxkeyword"><a href="getrealtimeorder.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetRealtimeOrder()</span></a></p>
+<p class="idxkeyword"><a href="getselectionpoints.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetSelectionPoints()</span></a></p>
+<p class="idxkeyword"><a href="getsessionendtime.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetSessionEndTime() - Bars</span></a></p>
+<p class="idxkeyword"><a href="getslotindexbytime.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetSlotIndexByTime() - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="getslotindexbyx.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetSlotIndexByX() - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="gettime.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetTime() - Bars</span></a></p>
+<p class="idxkeyword"><a href="chartbars_gettimebybaridx.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetTimeByBarIdx() - ChartBars</span></a></p>
+<p class="idxkeyword"><a href="gettimebyslotindex.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetTimeBySlotIndex() - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="gettimebyx.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetTimeByX() - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="gettrades.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetTrades()</span></a></p>
+<p class="idxkeyword"><a href="gettradingday.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetTradingDay()</span></a></p>
+<p class="idxkeyword"><a href="gettradingdaybeginlocal.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetTradingDayBeginLocal()</span></a></p>
+<p class="idxkeyword"><a href="gettradingdayendlocal.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetTradingDayEndLocal()</span></a></p>
+<p class="idxkeyword"><a href="position_getunrealizedprofitloss.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetUnrealizedProfitLoss() - Position</span></a></p>
+<p class="idxkeyword"><a href="positionaccount_getunrealizedprofitloss.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetUnrealizedProfitLoss() - PositionAccount</span></a></p>
+<p class="idxkeyword"><a href="getvalueat.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetValueAt()</span></a></p>
+<p class="idxkeyword"><a href="getvaluebyy.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetValueByY() - ChartScale</span></a></p>
+<p class="idxkeyword"><a href="getvaluebyywpf.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetValueByYWpf() - ChartScale</span></a></p>
+<p class="idxkeyword"><a href="getvolume.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetVolume() - Bars</span></a></p>
+<p class="idxkeyword"><a href="getxbybarindex.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetXByBarIndex() - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="getxbytime.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetXByTime() - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="getybyvalue.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetYByValue() - ChartScale</span></a></p>
+<p class="idxkeyword"><a href="getybyvaluewpf.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GetYByValueWpf() - ChartScale</span></a></p>
+<p class="idxkeyword"><a href="grossloss.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GrossLoss</span></a></p>
+<p class="idxkeyword"><a href="grossprofit.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">GrossProfit</span></a></p>
+<a name="H" id="H"></a><p class="idxsection">- H -</p>
+<p class="idxkeyword"><a href="h_height_chartpanel.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">H (Height) - ChartPanel</span></a></p>
+<p class="idxkeyword"><a href="height.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Height - ChartScale</span></a></p>
+<p class="idxkeyword"><a href="high.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">High</span></a></p>
+<p class="idxkeyword"><a href="highestbar.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">HighestBar() - Analytical</span></a></p>
+<p class="idxkeyword"><a href="highs.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Highs</span></a></p>
+<p class="idxkeyword"><a href="holidays.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Holidays</span></a></p>
+<p class="idxkeyword"><a href="horizontalline.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">HorizontalLine</span></a></p>
+<a name="I" id="I"></a><p class="idxsection">- I -</p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k353')"><span class="idxkeyword">Icon</span></a></p>
+<div id="k353" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="builtfrom.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">BuiltFrom</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="icon_barstype.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Icon</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="barstype_sessioniterator.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">SessionIterator</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="icon_chartstyle.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Icon</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="icon_drawingtool.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Icon</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="icon.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Icon</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="idrawingtool.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IDrawingTool</span></a></p>
+<p class="idxkeyword"><a href="ignoreoverfill.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IgnoreOverfill</span></a></p>
+<p class="idxkeyword"><a href="ignoressnapping.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IgnoresSnapping</span></a></p>
+<p class="idxkeyword"><a href="ignoresuserinput.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IgnoresUserInput</span></a></p>
+<p class="idxkeyword"><a href="iinstrumentprovider_interface.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IInstrumentProvider</span></a></p>
+<p class="idxkeyword"><a href="iintervalprovider_interface.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IIntervalProvider</span></a></p>
+<p class="idxkeyword"><a href="includecommission.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IncludeCommission</span></a></p>
+<p class="idxkeyword"><a href="includetradehistoryinbacktest.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IncludeTradeHistoryInBacktest</span></a></p>
+<p class="idxkeyword"><a href="indicatorbaseconverter.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IndicatorBaseConverter</span></a></p>
+<p class="idxkeyword"><a href="chartcontrol_indicators.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Indicators - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="input.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Input</span></a></p>
+<p class="idxkeyword"><a href="inputs.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Inputs</span></a></p>
+<p class="idxkeyword"><a href="instrument.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Instrument</span></a></p>
+<p class="idxkeyword"><a href="iinstrumentprovider_instrument.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Instrument - IInstrumentProvider</span></a></p>
+<p class="idxkeyword"><a href="position_instrument.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Instrument - Position</span></a></p>
+<p class="idxkeyword"><a href="positionaccount_instrument.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Instrument - PositionAccount</span></a></p>
+<p class="idxkeyword"><a href="instrumentselector.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">InstrumentSelector</span></a></p>
+<p class="idxkeyword"><a href="instrumenttype.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">InstrumentType</span></a></p>
+<p class="idxkeyword"><a href="intervalselector.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IntervalSelector</span></a></p>
+<p class="idxkeyword"><a href="inttabfactory_class.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">INTTabFactory</span></a></p>
+<p class="idxkeyword"><a href="isadoptaccountpositionaware.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsAdoptAccountPositionAware</span></a></p>
+<p class="idxkeyword"><a href="isattachedtoninjascript.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsAttachedToNinjaScript</span></a></p>
+<p class="idxkeyword"><a href="isauthorizationrequired.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsAuthorizationRequired</span></a></p>
+<p class="idxkeyword"><a href="isautoscale.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsAutoScale - Charts</span></a></p>
+<p class="idxkeyword"><a href="isbrowsable.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsBrowsable</span></a></p>
+<p class="idxkeyword"><a href="ischartonly.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsChartOnly</span></a></p>
+<p class="idxkeyword"><a href="isconfigured.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsConfigured</span></a></p>
+<p class="idxkeyword"><a href="isdataseriesrequired.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsDataSeriesRequired</span></a></p>
+<p class="idxkeyword"><a href="isdefault.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsDefault</span></a></p>
+<p class="idxkeyword"><a href="iseditable.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsEditable - Market Analyzer Column</span></a></p>
+<p class="idxkeyword"><a href="isediting.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsEditing</span></a></p>
+<p class="idxkeyword"><a href="iseriest.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ISeries&lt;T&gt;</span></a></p>
+<p class="idxkeyword"><a href="isexitonsessionclosestrategy.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsExitOnSessionCloseStrategy</span></a></p>
+<p class="idxkeyword"><a href="falling.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsFalling() - Analytical</span></a></p>
+<p class="idxkeyword"><a href="isfilllimitontouch.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsFillLimitOnTouch</span></a></p>
+<p class="idxkeyword"><a href="isfirstbarofsession.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsFirstBarOfSession - Bars</span></a></p>
+<p class="idxkeyword"><a href="isfirstbarofsessionbyindex.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsFirstBarOfSessionByIndex() - Bars</span></a></p>
+<p class="idxkeyword"><a href="isglobaldrawingtool.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsGlobalDrawingTool</span></a></p>
+<p class="idxkeyword"><a href="isimageattachmentsupported.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsImageAttachmentSupported</span></a></p>
+<p class="idxkeyword"><a href="isinhittest.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsInHitTest - Rendering</span></a></p>
+<p class="idxkeyword"><a href="isinsession.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsInSession()</span></a></p>
+<p class="idxkeyword"><a href="isinstantiatedoneachoptimizationiteration.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsInstantiatedOnEachOptimizationIteration</span></a></p>
+<p class="idxkeyword"><a href="islastbarofsession.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsLastBarOfSession - Bars</span></a></p>
+<p class="idxkeyword"><a href="islocked.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsLocked</span></a></p>
+<p class="idxkeyword"><a href="isnewsession.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsNewSession()</span></a></p>
+<p class="idxkeyword"><a href="isninjascriptdrawn.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsNinjaScriptDrawn</span></a></p>
+<p class="idxkeyword"><a href="isoverlay.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsOverlay - Charts</span></a></p>
+<p class="idxkeyword"><a href="isremovelastbarsupported.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsRemoveLastBarSupported - BarsType</span></a></p>
+<p class="idxkeyword"><a href="isresetonnewtradingday.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsResetOnNewTradingDay - Bars</span></a></p>
+<p class="idxkeyword"><a href="isresetonnewtradingdays.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsResetOnNewTradingDays</span></a></p>
+<p class="idxkeyword"><a href="rising.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsRising() - Analytical</span></a></p>
+<p class="idxkeyword"><a href="isscrollarrowvisible.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsScrollArrowVisible - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="isselected.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsSelected - Rendering</span></a></p>
+<p class="idxkeyword"><a href="isseparatezorder.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsSeparateZOrder - Charts</span></a></p>
+<p class="idxkeyword"><a href="isstayindrawmode.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsStayInDrawMode - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="issuspendedwhileinactive.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsSuspendedWhileInactive</span></a></p>
+<p class="idxkeyword"><a href="isterminalstate.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsTerminalState</span></a></p>
+<p class="idxkeyword"><a href="istickreplay.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsTickReplay - Bars</span></a></p>
+<p class="idxkeyword"><a href="istickreplays.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsTickReplays</span></a></p>
+<p class="idxkeyword"><a href="barstype_istimebased.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsTimebased - BarsType</span></a></p>
+<p class="idxkeyword"><a href="istradingdaydefined.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsTradingDayDefined()</span></a></p>
+<p class="idxkeyword"><a href="istradinghoursbreaklinevisible.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsTradingHoursBreakLineVisible</span></a></p>
+<p class="idxkeyword"><a href="istransparent.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsTransparent - Chart Style</span></a></p>
+<p class="idxkeyword"><a href="isunmanaged.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsUnmanaged</span></a></p>
+<p class="idxkeyword"><a href="isuserdrawn.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsUserDrawn</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k419')"><span class="idxkeyword">IsValidDataPoint()</span></a></p>
+<div id="k419" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="isvaliddatapoint.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">IsValidDataPoint()</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="isvaliddatapointat.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">IsValidDataPointAt()</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="chartscale_isvisible.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsVisible - ChartScale</span></a></p>
+<p class="idxkeyword"><a href="isvisible.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsVisible - NinjaScript</span></a></p>
+<p class="idxkeyword"><a href="isvisibleonchart.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsVisibleOnChart() - Rendering</span></a></p>
+<p class="idxkeyword"><a href="iswaituntilflat.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsWaitUntilFlat</span></a></p>
+<p class="idxkeyword"><a href="isyaxisdisplayedoverlay.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsXAxisDisplayedOverlay - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="isxpropertiesvisible.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsXPropertiesVisibile</span></a></p>
+<p class="idxkeyword"><a href="isyaxisdisplayedleft.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsYAxisDisplayedLeft - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="isyacisdisplayedleft_chartpanel.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsYAxisDisplayedLeft - ChartPanel</span></a></p>
+<p class="idxkeyword"><a href="isyaxisdisplayedoverlay_chartpanel.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsYAxisDisplayedOverlay - ChartPanel</span></a></p>
+<p class="idxkeyword"><a href="isyaxisdisplayedright.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsYAxisDisplayedRight - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="isyaxisdisplayedright_chartpanel.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsYAxisDisplayedRight - ChartPanel</span></a></p>
+<p class="idxkeyword"><a href="isypropertyvisibile.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IsYPropertyVisibile</span></a></p>
+<p class="idxkeyword"><a href="iworkspacepersistence_interface.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">IWorkspacePersistence</span></a></p>
+<a name="K" id="K"></a><p class="idxsection">- K -</p>
+<p class="idxkeyword"><a href="keltner_channel.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Keltner Channel</span></a></p>
+<p class="idxkeyword"><a href="keyreversaldown.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">KeyReversalDown</span></a></p>
+<p class="idxkeyword"><a href="keyreversalup.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">KeyReversalUp</span></a></p>
+<a name="L" id="L"></a><p class="idxsection">- L -</p>
+<p class="idxkeyword"><a href="largestloser.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">LargestLoser</span></a></p>
+<p class="idxkeyword"><a href="largestwinner.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">LargestWinner</span></a></p>
+<p class="idxkeyword"><a href="lastslotpainted.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">LastSlotPainted - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="lasttimepainted.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">LastTimePainted - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="least_recent_occurence_lro.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Least Recent Occurrence (LRO) - Analytical</span></a></p>
+<p class="idxkeyword"><a href="line.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Line</span></a></p>
+<p class="idxkeyword"><a href="line_class.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Line Class</span></a></p>
+<p class="idxkeyword"><a href="linear_regression.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Linear Regression</span></a></p>
+<p class="idxkeyword"><a href="linear_regression_intercept.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Linear Regression Intercept</span></a></p>
+<p class="idxkeyword"><a href="linear_regression_slope.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Linear Regression Slope</span></a></p>
+<p class="idxkeyword"><a href="lines.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Lines</span></a></p>
+<p class="idxkeyword"><a href="log.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Log() - Alert, Debug, Share</span></a></p>
+<p class="idxkeyword"><a href="longestflatperiod.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">LongestFlatPeriod</span></a></p>
+<p class="idxkeyword"><a href="longtrades.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">LongTrades</span></a></p>
+<p class="idxkeyword"><a href="losingtrades.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">LosingTrades</span></a></p>
+<p class="idxkeyword"><a href="low.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Low</span></a></p>
+<p class="idxkeyword"><a href="lowestbar.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">LowestBar() - Analytical</span></a></p>
+<p class="idxkeyword"><a href="lows.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Lows</span></a></p>
+<a name="M" id="M"></a><p class="idxsection">- M -</p>
+<p class="idxkeyword"><a href="maenvelopes.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MA Envelopes</span></a></p>
+<p class="idxkeyword"><a href="marketdata.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MarketData</span></a></p>
+<p class="idxkeyword"><a href="marketdataeventargs.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MarketDataEventArgs</span></a></p>
+<p class="idxkeyword"><a href="marketdepth.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MarketDepth - AddOn</span></a></p>
+<p class="idxkeyword"><a href="superdomcolumn_marketdepth.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MarketDepth - SuperDOM Column</span></a></p>
+<p class="idxkeyword"><a href="marketdeptheventargs.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MarketDepthEventArgs</span></a></p>
+<p class="idxkeyword"><a href="position_marketposition.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MarketPosition - Position</span></a></p>
+<p class="idxkeyword"><a href="positionaccount_marketposition.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MarketPosition - PositionAccount</span></a></p>
+<p class="idxkeyword"><a href="masterinstrument.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MasterInstrument</span></a></p>
+<p class="idxkeyword"><a href="maxconsecutiveloser.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MaxConsecutiveLoser</span></a></p>
+<p class="idxkeyword"><a href="maxconsecutivewinner.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MaxConsecutiveWinner</span></a></p>
+<p class="idxkeyword"><a href="maximum_max.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Maximum (MAX)</span></a></p>
+<p class="idxkeyword"><a href="maximumbarslookback.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MaximumBarsLookBack</span></a></p>
+<p class="idxkeyword"><a href="maxminusmin.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MaxMinusMin - ChartScale</span></a></p>
+<p class="idxkeyword"><a href="maxtimetorecover.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MaxTimeToRecover</span></a></p>
+<p class="idxkeyword"><a href="maxvalue_chartpanel.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MaxValue - ChartPanel</span></a></p>
+<p class="idxkeyword"><a href="chartscale_maxvalue.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MaxValue - ChartScale</span></a></p>
+<p class="idxkeyword"><a href="maxvalue.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MaxValue - Rendering</span></a></p>
+<p class="idxkeyword"><a href="median.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Median</span></a></p>
+<p class="idxkeyword"><a href="medians.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Medians</span></a></p>
+<p class="idxkeyword"><a href="mergepolicy.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MergePolicy</span></a></p>
+<p class="idxkeyword"><a href="minimum_min.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Minimum (MIN)</span></a></p>
+<p class="idxkeyword"><a href="minvalue_chartpanel.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MinValue - ChartPanel</span></a></p>
+<p class="idxkeyword"><a href="chartscale_minvalue.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MinValue - ChartScale</span></a></p>
+<p class="idxkeyword"><a href="minvalue.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MinValue - Rendering</span></a></p>
+<p class="idxkeyword"><a href="momentum.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Momentum</span></a></p>
+<p class="idxkeyword"><a href="money_flow_index_mfi.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Money Flow Index (MFI)</span></a></p>
+<p class="idxkeyword"><a href="monthlystddev.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MonthlyStdDev</span></a></p>
+<p class="idxkeyword"><a href="monthlyulcer.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MonthlyUlcer</span></a></p>
+<p class="idxkeyword"><a href="most_recent_occurence_mro.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Most Recent Occurrence (MRO) - Analytical</span></a></p>
+<p class="idxkeyword"><a href="mousedownpoint.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MouseDownPoint - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="moveanchor.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MoveAnchor()</span></a></p>
+<p class="idxkeyword"><a href="moveanchorx.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MoveAnchorX()</span></a></p>
+<p class="idxkeyword"><a href="moveanchory.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">MoveAnchorY()</span></a></p>
+<p class="idxkeyword"><a href="moving_average_-_double_expone.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Moving Average - Double Exponential (DEMA)</span></a></p>
+<p class="idxkeyword"><a href="moving_average_-_exponential_e.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Moving Average - Exponential (EMA)</span></a></p>
+<p class="idxkeyword"><a href="moving_average_-_hull_hma.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Moving Average - Hull (HMA)</span></a></p>
+<p class="idxkeyword"><a href="moving_average_-_kaufmans_adap.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Moving Average - Kaufman's Adaptive (KAMA)</span></a></p>
+<p class="idxkeyword"><a href="moving_average_-_mesa_adaptive.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Moving Average - Mesa Adaptive (MAMA)</span></a></p>
+<p class="idxkeyword"><a href="moving_average_-_simple_sma.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Moving Average - Simple (SMA)</span></a></p>
+<p class="idxkeyword"><a href="moving_average_-_t3_t3.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Moving Average - T3 (T3)</span></a></p>
+<p class="idxkeyword"><a href="moving_average_-_triangular_tm.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Moving Average - Triangular (TMA)</span></a></p>
+<p class="idxkeyword"><a href="moving_average_-_triple_expone.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Moving Average - Triple Exponential (TEMA)</span></a></p>
+<p class="idxkeyword"><a href="moving_average_-_triple_expon2.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Moving Average - Triple Exponential (TRIX)</span></a></p>
+<p class="idxkeyword"><a href="moving_average_-_variable_vma.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Moving Average - Variable (VMA)</span></a></p>
+<p class="idxkeyword"><a href="moving_average_-_volume_weight.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Moving Average - Volume Weighted (VWMA)</span></a></p>
+<p class="idxkeyword"><a href="moving_average_-_weighted_wma.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Moving Average - Weighted (WMA)</span></a></p>
+<p class="idxkeyword"><a href="moving_average_-_zero_lag_expo.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Moving Average - Zero Lag Exponential (ZLEMA)</span></a></p>
+<p class="idxkeyword"><a href="moving_average_convergence-divergence_macd.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Moving Average Convergence-Divergence (MACD)</span></a></p>
+<a name="N" id="N"></a><p class="idxsection">- N -</p>
+<p class="idxkeyword"><a href="n_bars_down.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">n Bars Down</span></a></p>
+<p class="idxkeyword"><a href="n_bars_up.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">n Bars Up</span></a></p>
+<p class="idxkeyword"><a href="name_account.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Name - Account</span></a></p>
+<p class="idxkeyword"><a href="masterinstrument_name.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Name - Master Instrument</span></a></p>
+<p class="idxkeyword"><a href="name.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Name - NinjaScript</span></a></p>
+<p class="idxkeyword"><a href="tradinghours_name.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Name - Trading Hours</span></a></p>
+<p class="idxkeyword"><a href="netprofit.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">NetProfit</span></a></p>
+<p class="idxkeyword"><a href="newsitems.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">NewsItems</span></a></p>
+<p class="idxkeyword"><a href="newssubscription.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">NewsSubscription</span></a></p>
+<p class="idxkeyword"><a href="ninjascriptpropertyattribute.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">NinjaScriptPropertyAttribute - Attributes</span></a></p>
+<p class="idxkeyword"><a href="ntmenuitem.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">NTMenuItem</span></a></p>
+<p class="idxkeyword"><a href="nttabpage_class.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">NTTabPage</span></a></p>
+<p class="idxkeyword"><a href="ntwindow.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">NTWindow</span></a></p>
+<p class="idxkeyword"><a href="numberofiterations.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">NumberOfIterations</span></a></p>
+<p class="idxkeyword"><a href="numberrestartattempts.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">NumberRestartAttempts</span></a></p>
+<p class="idxkeyword"><a href="numerictextbox.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">NumericTextBox</span></a></p>
+<a name="O" id="O"></a><p class="idxsection">- O -</p>
+<p class="idxkeyword"><a href="on_balance_volume_obv.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">On Balance Volume (OBV)</span></a></p>
+<p class="idxkeyword"><a href="onaccountitemupdate.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnAccountItemUpdate() - Strategy</span></a></p>
+<p class="idxkeyword"><a href="onaddtrade.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnAddTrade()</span></a></p>
+<p class="idxkeyword"><a href="onauthorizeaccount.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnAuthorizeAccount()</span></a></p>
+<p class="idxkeyword"><a href="onbarschanged.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnBarsChanged()</span></a></p>
+<p class="idxkeyword"><a href="onbarupdate.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnBarUpdate()</span></a></p>
+<p class="idxkeyword"><a href="oncalculateminmax.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnCalculateMinMax() - Rendering</span></a></p>
+<p class="idxkeyword"><a href="oncalculateperformancevalue.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnCalculatePerformanceValue()</span></a></p>
+<p class="idxkeyword"><a href="onconnectionstatusupdate.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnConnectionStatusUpdate() - Indicator</span></a></p>
+<p class="idxkeyword"><a href="ondatapoint.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnDataPoint()</span></a></p>
+<p class="idxkeyword"><a href="onexecutionupdate.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnExecutionUpdate() - Strategy</span></a></p>
+<p class="idxkeyword"><a href="onfundamentaldata.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnFundamentalData()</span></a></p>
+<p class="idxkeyword"><a href="onmarketdata.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnMarketData()</span></a></p>
+<p class="idxkeyword"><a href="superdomcolumn_onmarketdata.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnMarketData() - SuperDOM Column</span></a></p>
+<p class="idxkeyword"><a href="onmarketdepth.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnMarketDepth()</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k534')"><span class="idxkeyword">OnMergePerformanceMetric()</span></a></p>
+<div id="k534" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="oncopyto.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">OnCopyTo()</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="onmergeperformancemetric.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">OnMergePerformanceMetric()</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="onmousedown.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnMouseDown()</span></a></p>
+<p class="idxkeyword"><a href="onmousemove.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnMouseMove()</span></a></p>
+<p class="idxkeyword"><a href="onmouseup.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnMouseUp()</span></a></p>
+<p class="idxkeyword"><a href="onnextdatapoint.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnNextDataPoint()</span></a></p>
+<p class="idxkeyword"><a href="onnextinstrument.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnNextInstrument()</span></a></p>
+<p class="idxkeyword"><a href="onoptimize.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnOptimize()</span></a></p>
+<p class="idxkeyword"><a href="onordertrace.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnOrderTrace()</span></a></p>
+<p class="idxkeyword"><a href="onorderupdate.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnOrderUpdate() - Strategy</span></a></p>
+<p class="idxkeyword"><a href="superdomcolumn_onorderupdate.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnOrderUpdate() - SuperDOM Column</span></a></p>
+<p class="idxkeyword"><a href="onpositionupdate.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnPositionUpdate() - Strategy</span></a></p>
+<p class="idxkeyword"><a href="superdomcolumn_onpositionupdate.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnPositionUpdate() - SuperDOM Column</span></a></p>
+<p class="idxkeyword"><a href="onpropertychanged.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnPropertyChanged()</span></a></p>
+<p class="idxkeyword"><a href="chartstyle_onrender.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnRender() - ChartStyle</span></a></p>
+<p class="idxkeyword"><a href="onrender.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnRender() - Rendering</span></a></p>
+<p class="idxkeyword"><a href="superdomcolumn_onrender.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnRender() - SuperDOM Column</span></a></p>
+<p class="idxkeyword"><a href="onrendertargetchanged.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnRenderTargetChanged - RenderTarget</span></a></p>
+<p class="idxkeyword"><a href="onrestorevalues.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnRestoreValues() - SuperDOMColumn</span></a></p>
+<p class="idxkeyword"><a href="onshare.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnShare()</span></a></p>
+<p class="idxkeyword"><a href="onstatechange.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnStateChange()</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k554')"><span class="idxkeyword">OnWindowCreated()</span></a></p>
+<div id="k554" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="onwindowcreated.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">OnWindowCreated()</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="onwindowrestored.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">OnWindowRestored()</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="onwindowsaved.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">OnWindowSaved()</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="onwindowdestroyed.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OnWindowDestroyed()</span></a></p>
+<p class="idxkeyword"><a href="open.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Open</span></a></p>
+<p class="idxkeyword"><a href="opens.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Opens</span></a></p>
+<p class="idxkeyword"><a href="optimizationparameters.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OptimizationParameters</span></a></p>
+<p class="idxkeyword"><a href="optimizationperiod.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OptimizationPeriod</span></a></p>
+<p class="idxkeyword"><a href="connections_options.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Options - Connections</span></a></p>
+<p class="idxkeyword"><a href="order.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Order</span></a></p>
+<p class="idxkeyword"><a href="orderfillresolution.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OrderFillResolution</span></a></p>
+<p class="idxkeyword"><a href="orderfillresolutiontype.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OrderFillResolutionType</span></a></p>
+<p class="idxkeyword"><a href="orderfillresolutionvalue.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OrderFillResolutionValue</span></a></p>
+<p class="idxkeyword"><a href="orders_account.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Orders - Account</span></a></p>
+<p class="idxkeyword"><a href="orderupdate.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">OrderUpdate</span></a></p>
+<a name="P" id="P"></a><p class="idxsection">- P -</p>
+<p class="idxkeyword"><a href="paintpricemarkers.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PaintPriceMarkers</span></a></p>
+<p class="idxkeyword"><a href="chartbars_panel.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Panel - ChartBars</span></a></p>
+<p class="idxkeyword"><a href="panelindex_chartpanel.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PanelIndex - ChartPanel</span></a></p>
+<p class="idxkeyword"><a href="panelindex.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PanelIndex - ChartScale</span></a></p>
+<p class="idxkeyword"><a href="panelui.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PanelUI - Rendering</span></a></p>
+<p class="idxkeyword"><a href="parabolic_sar.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Parabolic SAR</span></a></p>
+<p class="idxkeyword"><a href="partialholidays.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PartialHolidays</span></a></p>
+<p class="idxkeyword"><a href="percent.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Percent</span></a></p>
+<p class="idxkeyword"><a href="percentage_price_oscillator_pp.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Percentage Price Oscillator (PPO)</span></a></p>
+<p class="idxkeyword"><a href="percentcomplete.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PercentComplete - Bars</span></a></p>
+<p class="idxkeyword"><a href="strategy_performancemetrics.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PerformanceMetrics - Strategy</span></a></p>
+<p class="idxkeyword"><a href="performancemetrics.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PerformanceMetrics - TradesPerformance</span></a></p>
+<p class="idxkeyword"><a href="performanceunit.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PerformanceUnit</span></a></p>
+<p class="idxkeyword"><a href="pips.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Pips</span></a></p>
+<p class="idxkeyword"><a href="pivots.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Pivots</span></a></p>
+<p class="idxkeyword"><a href="playsound.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PlaySound() - Alert, Debug, Share</span></a></p>
+<p class="idxkeyword"><a href="plotbrushes.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PlotBrushes</span></a></p>
+<p class="idxkeyword"><a href="plots.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Plots</span></a></p>
+<p class="idxkeyword"><a href="strategy_plots.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Plots - Strategy</span></a></p>
+<p class="idxkeyword"><a href="points.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Points</span></a></p>
+<p class="idxkeyword"><a href="pointvalue.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PointValue</span></a></p>
+<p class="idxkeyword"><a href="polarized_fractal_efficiency_p.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Polarized Fractal Efficiency (PFE)</span></a></p>
+<p class="idxkeyword"><a href="position.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Position</span></a></p>
+<p class="idxkeyword"><a href="positionaccount.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PositionAccount</span></a></p>
+<p class="idxkeyword"><a href="positions.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Positions</span></a></p>
+<p class="idxkeyword"><a href="positions_account.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Positions - Account</span></a></p>
+<p class="idxkeyword"><a href="positionsaccount.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PositionsAccount</span></a></p>
+<p class="idxkeyword"><a href="positionupdate.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PositionUpdate</span></a></p>
+<p class="idxkeyword"><a href="presentationsource.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PresentationSource</span></a></p>
+<p class="idxkeyword"><a href="price.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Price</span></a></p>
+<p class="idxkeyword"><a href="price_oscillator.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Price Oscillator</span></a></p>
+<p class="idxkeyword"><a href="priceseries.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PriceSeries&lt;double&gt;</span></a></p>
+<p class="idxkeyword"><a href="connections_pricestatus.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PriceStatus - Connections</span></a></p>
+<p class="idxkeyword"><a href="print.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Print() - Alert, Debug, Share</span></a></p>
+<p class="idxkeyword"><a href="printto.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PrintTo - Alert, Debug, Share</span></a></p>
+<p class="idxkeyword"><a href="prior_day_ohlc.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Prior Day OHLC</span></a></p>
+<p class="idxkeyword"><a href="priorvalue.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PriorValue - Market Analyzer Column</span></a></p>
+<p class="idxkeyword"><a href="profitfactor.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ProfitFactor</span></a></p>
+<p class="idxkeyword"><a href="profitpermonth.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ProfitPerMonth</span></a></p>
+<p class="idxkeyword"><a href="propagateinstrumentchange().html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PropagateInstrumentChange()</span></a></p>
+<p class="idxkeyword"><a href="propagateintervalchange().html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">PropagateIntervalChange()</span></a></p>
+<p class="idxkeyword"><a href="chartbars_properties.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Properties - ChartBars</span></a></p>
+<p class="idxkeyword"><a href="chartcontrol_properties.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Properties - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="chartscale_properties.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Properties - ChartScale</span></a></p>
+<a name="Q" id="Q"></a><p class="idxsection">- Q -</p>
+<p class="idxkeyword"><a href="position_quantity.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Quantity - Position</span></a></p>
+<p class="idxkeyword"><a href="positionaccount_quantity.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Quantity - PositionAccount</span></a></p>
+<p class="idxkeyword"><a href="quantityupdown.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">QuantityUpDown</span></a></p>
+<a name="R" id="R"></a><p class="idxsection">- R -</p>
+<p class="idxkeyword"><a href="range.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Range</span></a></p>
+<p class="idxkeyword"><a href="range_indicator_rind.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Range Indicator (RIND)</span></a></p>
+<p class="idxkeyword"><a href="rangeattribute.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">RangeAttribute - Attributes</span></a></p>
+<p class="idxkeyword"><a href="rate_of_change_roc.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Rate of Change (ROC)</span></a></p>
+<p class="idxkeyword"><a href="ray.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Ray</span></a></p>
+<p class="idxkeyword"><a href="realtimeerrorhandling.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">RealtimeErrorHandling</span></a></p>
+<p class="idxkeyword"><a href="realtimetrades.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">RealtimeTrades</span></a></p>
+<p class="idxkeyword"><a href="rearmalert.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">RearmAlert() - Alert, Debug, Share</span></a></p>
+<p class="idxkeyword"><a href="rectangle.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Rectangle</span></a></p>
+<p class="idxkeyword"><a href="region.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Region</span></a></p>
+<p class="idxkeyword"><a href="regionhighlightx.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">RegionHighlightX</span></a></p>
+<p class="idxkeyword"><a href="regionhighlighty.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">RegionHighlightY</span></a></p>
+<p class="idxkeyword"><a href="regression_channel.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Regression Channel</span></a></p>
+<p class="idxkeyword"><a href="regressionchannel.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">RegressionChannel</span></a></p>
+<p class="idxkeyword"><a href="relative_spread_strength_rss.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Relative Spread Strength (RSS)</span></a></p>
+<p class="idxkeyword"><a href="relative_strength_index_rsi.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Relative Strength Index (RSI)</span></a></p>
+<p class="idxkeyword"><a href="relative_volatility_index_rvi.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Relative Volatility Index (RVI)</span></a></p>
+<p class="idxkeyword"><a href="reloadallhistoricaldata.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ReloadAllHistoricalData()</span></a></p>
+<p class="idxkeyword"><a href="removedrawobject.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">RemoveDrawObject()</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k633')"><span class="idxkeyword">RemoveDrawObjects()</span></a></p>
+<div id="k633" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="removedrawobjects.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">RemoveDrawObjects()</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="simplefont_applyto.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">ApplyTo()</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="simplefont_todirectwritetextformat.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">ToDirectWriteTextFormat()</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k634')"><span class="idxkeyword">RenderTarget</span></a></p>
+<div id="k634" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="d2dfactory.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">D2DFactory</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="directwritefactory.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">DirectWriteFactory</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="dxextensions.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">DxExtensions</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="dxextensions_todxbrush.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">ToDxBrush()</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="dxextensions_tovector2.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">ToVector2()</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="rendertarget.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">RenderTarget</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k635')"><span class="idxkeyword">Request() - BarsRequest</span></a></p>
+<div id="k635" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="request.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">Request()</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="barsrequest_mergepolicy.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">MergePolicy</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="reset.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Reset()</span></a></p>
+<p class="idxkeyword"><a href="restartswithinminutes.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">RestartsWithinMinutes</span></a></p>
+<p class="idxkeyword"><a href="iworkspacepersistence_restore.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Restore() - IWorkspacePersistence</span></a></p>
+<p class="idxkeyword"><a href="nttabpage_restore.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Restore() - NTTabPage</span></a></p>
+<p class="idxkeyword"><a href="riskfreereturn.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">RiskFreeReturn</span></a></p>
+<p class="idxkeyword"><a href="riskreward.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">RiskReward</span></a></p>
+<p class="idxkeyword"><a href="rollovercollection.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">RolloverCollection</span></a></p>
+<p class="idxkeyword"><a href="rounddowntoticksize.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">RoundDownToTickSize()</span></a></p>
+<p class="idxkeyword"><a href="roundtoticksize.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">RoundToTickSize()</span></a></p>
+<p class="idxkeyword"><a href="rsquared.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">RSquared</span></a></p>
+<p class="idxkeyword"><a href="r_squared.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">R-squared</span></a></p>
+<p class="idxkeyword"><a href="ruler.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Ruler</span></a></p>
+<p class="idxkeyword"><a href="runiteration.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">RunIteration()</span></a></p>
+<a name="S" id="S"></a><p class="idxsection">- S -</p>
+<p class="idxkeyword"><a href="iworkspacepersistence_save.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Save() - IWorkspacePersistence</span></a></p>
+<p class="idxkeyword"><a href="nttabpage_save.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Save() - NTTabPage</span></a></p>
+<p class="idxkeyword"><a href="scalejustification.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ScaleJustification - Charts</span></a></p>
+<p class="idxkeyword"><a href="chartscale_scalejustification.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ScaleJustification - ChartScale</span></a></p>
+<p class="idxkeyword"><a href="chartscale_chartpanel.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Scales - ChartPanel</span></a></p>
+<p class="idxkeyword"><a href="sendmail.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">SendMail() - Alert, Debug, Share</span></a></p>
+<p class="idxkeyword"><a href="seriest.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Series&lt;T&gt;</span></a></p>
+<p class="idxkeyword"><a href="sessioniterator.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">SessionIterator</span></a></p>
+<p class="idxkeyword"><a href="tradinghours_sessions.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Sessions</span></a></p>
+<p class="idxkeyword"><a href="setorderquantity.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">SetOrderQuantity</span></a></p>
+<p class="idxkeyword"><a href="setprofittarget.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">SetProfitTarget()</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k660')"><span class="idxkeyword">SetPropertyName() - Chart Style</span></a></p>
+<div id="k660" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="setpropertyname.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">SetPropertyName()</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="setpropertyname_2.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">SetPropertyName()</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="setstate.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">SetState()</span></a></p>
+<p class="idxkeyword"><a href="setstoploss.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">SetStopLoss()</span></a></p>
+<p class="idxkeyword"><a href="settrailstop.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">SetTrailStop()</span></a></p>
+<p class="idxkeyword"><a href="share.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Share() - Alert, Debug, Share</span></a></p>
+<p class="idxkeyword"><a href="sharperatio.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">SharpeRatio</span></a></p>
+<p class="idxkeyword"><a href="shorttrades.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ShortTrades</span></a></p>
+<p class="idxkeyword"><a href="signature.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Signature</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k668')"><span class="idxkeyword">SimpleFont Class</span></a></p>
+<div id="k668" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="pricelevels.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">PriceLevels</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="simplefont_class.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxlink">SimpleFont</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="simulationaccountreset.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">SimulationAccountReset</span></a></p>
+<p class="idxkeyword"><a href="slippage.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Slippage</span></a></p>
+<p class="idxkeyword"><a href="slope.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Slope() - Analytical</span></a></p>
+<p class="idxkeyword"><a href="barindex.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">SlotIndex</span></a></p>
+<p class="idxkeyword"><a href="slotspainted.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">SlotsPainted - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="sortinoratio.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">SortinoRatio</span></a></p>
+<p class="idxkeyword"><a href="splits.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Splits</span></a></p>
+<p class="idxkeyword"><a href="square.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Square</span></a></p>
+<p class="idxkeyword"><a href="standard_deviation_stddev.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Standard Deviation (StdDev)</span></a></p>
+<p class="idxkeyword"><a href="standard_error_stderror.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Standard Error (StdError)</span></a></p>
+<p class="idxkeyword"><a href="startatmstrategy.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">StartAtmStrategy()</span></a></p>
+<p class="idxkeyword"><a href="startbehavior.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">StartBehavior</span></a></p>
+<p class="idxkeyword"><a href="state.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">State</span></a></p>
+<p class="idxkeyword"><a href="connections_status.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Status - Connections</span></a></p>
+<p class="idxkeyword"><a href="stddev.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">StdDev</span></a></p>
+<p class="idxkeyword"><a href="stochastics.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Stochastics</span></a></p>
+<p class="idxkeyword"><a href="stochastics_fast.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Stochastics Fast</span></a></p>
+<p class="idxkeyword"><a href="stochastics_rsi_stochrsi.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Stochastics RSI (StochRSI)</span></a></p>
+<p class="idxkeyword"><a href="stoptargethandling.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">StopTargetHandling - Stategy</span></a></p>
+<p class="idxkeyword"><a href="strategies_account.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Strategies - Account</span></a></p>
+<p class="idxkeyword"><a href="chartcontrol_strategies.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Strategies - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="strategybase.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">StrategyBase</span></a></p>
+<p class="idxkeyword"><a href="strategybaseconverter.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">StrategyBaseConverter</span></a></p>
+<p class="idxkeyword"><a href="stroke_class.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Stroke Class - Charts</span></a></p>
+<p class="idxkeyword"><a href="submit.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Submit()</span></a></p>
+<p class="idxkeyword"><a href="submitorderunmanaged.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">SubmitOrderUnmanaged()</span></a></p>
+<p class="idxkeyword"><a href="summation_sum.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Summation (SUM)</span></a></p>
+<p class="idxkeyword"><a href="supportsalerts.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">SupportsAlerts</span></a></p>
+<p class="idxkeyword"><a href="supportsmultiobjectiveoptimiza.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">SupportsMultiObjectiveOptimization</span></a></p>
+<p class="idxkeyword"><a href="swing.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Swing</span></a></p>
+<p class="idxkeyword"><a href="indicators.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">System Indicator Methods</span></a></p>
+<p class="idxkeyword"><a href="systemperformance.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">SystemPerformance</span></a></p>
+<a name="T" id="T"></a><p class="idxsection">- T -</p>
+<p class="idxkeyword"><a href="tabcontrol.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TabControl</span></a></p>
+<p class="idxkeyword"><a href="tabcontrolmanager.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TabControlManager</span></a></p>
+<p class="idxkeyword"><a href="testperiod.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TestPeriod</span></a></p>
+<p class="idxkeyword"><a href="text.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Text</span></a></p>
+<p class="idxkeyword"><a href="textfixed.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TextFixed</span></a></p>
+<p class="idxkeyword"><a href="tickcount.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TickCount - Bars</span></a></p>
+<p class="idxkeyword"><a href="ticks.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Ticks</span></a></p>
+<p class="idxkeyword"><a href="masterinstrument_ticksize.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TickSize - MasterInstrument</span></a></p>
+<p class="idxkeyword"><a href="ticksize.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TickSize - NinjaScript</span></a></p>
+<p class="idxkeyword"><a href="tifselector.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TifSelector</span></a></p>
+<p class="idxkeyword"><a href="time.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Time - ChartAnchor</span></a></p>
+<p class="idxkeyword"><a href="iseries_time.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Time - TimeSeries</span></a></p>
+<p class="idxkeyword"><a href="time_series_forecast_tsf.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Time Series Forecast (TSF)</span></a></p>
+<p class="idxkeyword"><a href="timeinforce.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TimeInForce</span></a></p>
+<p class="idxkeyword"><a href="timepainted.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TimePainted - ChartControl</span></a></p>
+<p class="idxkeyword"><a href="iseries_times.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Times</span></a></p>
+<p class="idxkeyword"><a href="timeseries.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TimeSeries&lt;DateTime&gt;</span></a></p>
+<p class="idxkeyword"><a href="timezoneinfo.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TimeZoneInfo</span></a></p>
+<p class="idxkeyword"><a href="tochartstring.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ToChartString() - Bars</span></a></p>
+<p class="idxkeyword"><a href="chartbars_tochartstring().html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ToChartString() - ChartBars</span></a></p>
+<p class="idxkeyword"><a href="today.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ToDay() - Analytical</span></a></p>
+<p class="idxkeyword"><a href="chartbars_toindex.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ToIndex - ChartBars</span></a></p>
+<p class="idxkeyword"><a href="totalcommission.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TotalCommission</span></a></p>
+<p class="idxkeyword"><a href="totalquantity.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TotalQuantity</span></a></p>
+<p class="idxkeyword"><a href="totalslippage.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TotalSlippage</span></a></p>
+<p class="idxkeyword"><a href="totime.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ToTime() - Analytical</span></a></p>
+<p class="idxkeyword"><a href="traceorders.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TraceOrders</span></a></p>
+<p class="idxkeyword"><a href="trade.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Trade</span></a></p>
+<p class="idxkeyword"><a href="tradecollection.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TradeCollection</span></a></p>
+<p class="idxkeyword"><a href="tradescount.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TradesCount</span></a></p>
+<p class="idxkeyword"><a href="tradesperday.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TradesPerDay</span></a></p>
+<p class="idxkeyword"><a href="tradesperformance.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TradesPerformance</span></a></p>
+<p class="idxkeyword"><a href="tradesperformancevalues.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TradesPerformanceValues</span></a></p>
+<p class="idxkeyword"><a href="tradinghours.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TradingHours</span></a></p>
+<p class="idxkeyword"><a href="transformbrush.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TransformBrush() - Chart Style</span></a></p>
+<p class="idxkeyword"><a href="trendchannel.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TrendChannel</span></a></p>
+<p class="idxkeyword"><a href="triangle.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Triangle</span></a></p>
+<p class="idxkeyword"><a href="triangledown.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TriangleDown</span></a></p>
+<p class="idxkeyword"><a href="triangleup.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TriangleUp</span></a></p>
+<p class="idxkeyword"><a href="triggercustomevent.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TriggerCustomEvent()</span></a></p>
+<p class="idxkeyword"><a href="true_strength_index_tsi.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">True Strength Index (TSI)</span></a></p>
+<p class="idxkeyword"><a href="turnaround.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Turnaround</span></a></p>
+<p class="idxkeyword"><a href="typeconverterattribute.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">TypeConverterAttribute - Attributes</span></a></p>
+<p class="idxkeyword"><a href="typical.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Typical</span></a></p>
+<p class="idxkeyword"><a href="typicals.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Typicals</span></a></p>
+<a name="U" id="U"></a><p class="idxsection">- U -</p>
+<p class="idxkeyword"><a href="ulcer.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Ulcer</span></a></p>
+<p class="idxkeyword"><a href="ultimate_oscillator.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Ultimate Oscillator</span></a></p>
+<p class="idxkeyword"><a href="upbrush.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">UpBrush - Chart Style</span></a></p>
+<p class="idxkeyword"><a href="upbrushdx.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">UpBrushDX - Chart Style</span></a></p>
+<p class="idxkeyword"><a href="update.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Update()</span></a></p>
+<p class="idxkeyword"><a href="updatebar.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">UpdateBar()</span></a></p>
+<p class="idxkeyword"><a href="updatefrompoint.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">UpdateFromPoint()</span></a></p>
+<p class="idxkeyword"><a href="updatexfrompoint.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">UpdateXFromPoint()</span></a></p>
+<p class="idxkeyword"><a href="updateyfrompoint.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">UpdateYFromPoint()</span></a></p>
+<p class="idxkeyword"><a href="url.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Url</span></a></p>
+<p class="idxkeyword"><a href="usercontrolcollection.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">UserControlCollection - Charts</span></a></p>
+<a name="V" id="V"></a><p class="idxsection">- V -</p>
+<p class="idxkeyword"><a href="value.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Value</span></a></p>
+<p class="idxkeyword"><a href="optimization_fitness_value.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Value (Optimization Fitness)</span></a></p>
+<p class="idxkeyword"><a href="values.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Values</span></a></p>
+<p class="idxkeyword"><a href="performancemetric_values.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Values (Performance Metrics)</span></a></p>
+<p class="idxkeyword"><a href="verticalline.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">VerticalLine</span></a></p>
+<p class="idxkeyword"><a href="iseries_volume.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Volume</span></a></p>
+<p class="idxkeyword"><a href="volume.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Volume (VOL)</span></a></p>
+<p class="idxkeyword"><a href="volume_moving_average_volma.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Volume Moving Average (VOLMA)</span></a></p>
+<p class="idxkeyword"><a href="volume_oscillator.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Volume Oscillator</span></a></p>
+<p class="idxkeyword"><a href="volume_rate_of_change_vroc.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Volume Rate of Change (VROC)</span></a></p>
+<p class="idxkeyword"><a href="volume_up_down.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Volume Up Down</span></a></p>
+<p class="idxkeyword"><a href="iseries_volumes.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Volumes</span></a></p>
+<p class="idxkeyword"><a href="volumeseries.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">VolumeSeries&lt;double&gt;</span></a></p>
+<a name="W" id="W"></a><p class="idxsection">- W -</p>
+<p class="idxkeyword"><a href="w_width_chartpanel.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">W (Width) - ChartPanel</span></a></p>
+<p class="idxkeyword"><a href="waitforococlosingbracket.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">WaitForOcoClosingBracket</span></a></p>
+<p class="idxkeyword"><a href="weighted.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Weighted</span></a></p>
+<p class="idxkeyword"><a href="weighteds.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Weighteds</span></a></p>
+<p class="idxkeyword"><a href="width.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Width - ChartScale</span></a></p>
+<p class="idxkeyword"><a href="williams_r.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Williams %R</span></a></p>
+<p class="idxkeyword"><a href="winningtrades.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">WinningTrades</span></a></p>
+<p class="idxkeyword"><a href="woodies_cci.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Woodies CCI</span></a></p>
+<p class="idxkeyword"><a href="woodies_pivots.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Woodies Pivots</span></a></p>
+<p class="idxkeyword"><a href="workspaceoptions.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">WorkspaceOptions</span></a></p>
+<a name="X" id="X"></a><p class="idxsection">- X -</p>
+<p class="idxkeyword"><a href="x_coordinate_chartpanel.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">X (Coordinate) - ChartPanel</span></a></p>
+<p class="idxkeyword"><a href="xmlignoreattribute.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">XmlIgnoreAttribute - Attributes</span></a></p>
+<a name="Y" id="Y"></a><p class="idxsection">- Y -</p>
+<p class="idxkeyword"><a href="y_coordinate_chartpanel.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">Y (Coordinate) - ChartPanel</span></a></p>
+<a name="Z" id="Z"></a><p class="idxsection">- Z -</p>
+<p class="idxkeyword"><a href="zigzag.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ZigZag</span></a></p>
+<p class="idxkeyword"><a href="chart_zorder.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ZOrder - Rendering</span></a></p>
+<p class="idxkeyword"><a href="zordertype.html" target="hmcontent" onclick="return trackidx(this);"><span class="idxkeyword">ZOrderType</span></a></p>
+</div>
+
+
+</body>
+
+<!-- Mirrored from ninjatrader.com/support/helpGuides/nt8/nt8_kwindex.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Jan 2023 20:02:13 GMT -->
+</html>

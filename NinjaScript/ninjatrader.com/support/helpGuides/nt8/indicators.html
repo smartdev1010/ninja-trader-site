@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html>
+  
+<!-- Mirrored from ninjatrader.com/support/helpGuides/nt8/indicators.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Jan 2023 19:58:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>NinjaScript &gt; Language Reference &gt; Common &gt; System Indicator Methods</title>
+    <meta name="generator" content="Help &amp; Manual" />
+    <meta name="keywords" content="System Indicator Methods" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link type="text/css" href="default.css" rel="stylesheet" />
+    <link type="text/css" href="custom.css" rel="stylesheet">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="nt_custom.js"></script>
+    <style TYPE="text/css" media="screen">
+    html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #FFFFFF;
+    line-height: 1.15
+    }
+    
+    div#printheader {
+    display: none
+    }
+    #idheader {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0
+    }
+    #idcontent {
+    position: relative
+    }
+    #callout-table, #overview-table {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0
+    }
+    #callout-icon {
+    display: block;
+    position: absolute;
+    top: -11px;
+    left: -11px
+    }
+    #callout-icon-flag {
+    display: block;
+    position: absolute;
+    top: -11px;
+    left: -8px
+    }
+    #callout-table a {
+    text-decoration: none;
+    color: blue
+    }
+    #callout-table a:visited {
+    text-decoration: none;
+    color: blue
+    }
+    #overview-table a {
+    text-decoration: none;
+    color: black
+    }
+    #overview-table a:visited {
+    text-decoration: none;
+    color: black
+    }
+    #callout-table a:hover, #overview-table a:hover {
+    text-decoration: underline
+    }
+    #switchtoggles {
+    text-align: right;
+    padding: 0 5px 0 0;
+    font-size: 90%
+    }
+    p.help-url {
+    margin: 20px 0 5px 0;
+    text-align: center;
+    font-size: 80%;
+    text-decoration: none
+    }
+    .sync-toc {
+    color: #ffffff;
+    font-size: 8pt;
+    font-weight: bold;
+    display: none
+    }
+    .sync-toc a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold
+    }
+    .sync-toc a:visited {
+    color: #ffffff
+    }
+    .sync-toc a:hover {
+    text-decoration: underline
+    }
+    .p_ToggleHeading:active {
+    box-shadow: 0px 0px 4px #9ecaed
+    }                    
+    .Needs {
+      border-color: #008000 !important;
+      background-color: #f3f9f4;
+    }
+    .Under {
+      border-color: #ffcc00 !important;
+      background-color: #fffdf6;
+    }
+    </style>
+    <noscript>
+    <style type="text/css">
+    html, body { overflow: auto; }
+    </style>
+    </noscript>
+    <style type="text/css" media="print">
+    span.f_Heading1 { color: black; }
+    #idheader, #printheader img { display:none; }
+    #printheader { display: block; margin-top: 20px; }
+    #idcontent { margin-top: 10px; position:relative }
+    </style>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="helpman_settings.js"></script>
+    <script type="text/javascript" src="helpman_topicinit.js"></script>
+    <script type="text/javascript" src="nsh.js"></script>
+    
+    
+    
+  
+   <script type="text/javascript">
+     HMSyncTOC("NT%20HelpGuide%20English.html", "indicators.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+  <body>
+    
+    
+    
+    <div id="printheader"><p class="p_HeadingTopic"><span class="f_HeadingTopic">System Indicator Methods</span></p>
+</div>
+    <div id="idheader">
+      <div id="idheaderbg">
+        <table style="width:100%;border:none;margin:0px;background:#A41E22" cellspacing="0" cellpadding="0">
+          <tr valign="bottom">
+            <td align="left" valign="bottom" class="topichead">
+              <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="NT%20HelpGuide%20English1554.html?indicators.htm" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+              <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+                
+              <a href="ninjascript.html">NinjaScript</a> &gt; <a href="language_reference_wip.html">Language Reference</a> &gt; <a href="common.html">Common</a>&nbsp;&gt;</p>
+              <p class="p_HeadingTopic"><span class="f_HeadingTopic">System Indicator Methods</span></p>
+
+            </td>
+            <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+              
+              <a href="simplefont_todirectwritetextformat.html"><img name="prev" src="leftArrow.png" border=0 alt="Previous page"></a>
+              
+              <a href="common.html"><img name=main src="upArrow.png" border=0 alt="Return to chapter overview"></a>
+              <a href="valid_input_data_for_indicator.html"><img name=next src="rightArrow.png" border=0 alt="Next page"></a>
+              
+            </td>
+          </tr>
+        </table>
+<!-- PM review header         
+        <div id="status" class="" style="margin-bottom: 0px; min-height: 25px;font-size: small; border-bottom: solid 3px;  padding: 5px;">
+          <b></b>: <span id="explain"></span>
+        </div>
+-->        
+        <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+        
+      </div>
+    </div>
+    
+    <div id="idcontent">
+      <div id="innerdiv">
+        <!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser -->
+        <!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+        
+        <!--ZOOMRESTART-->
+        <p class="p_Normal">The &quot;Indicators&quot; reference provides definitions, syntax, parameter definitions and examples for NinjaTrader system indicator methods.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="valid_input_data_for_indicator.html" class="topiclink">Valid Input Data for Indicator Methods</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="accumulation_distribution_adl.html" class="topiclink">Accumulation/Distribution (ADL)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="adaptive_price_zone_apz.html" class="topiclink">Adaptive Price Zone (APZ)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="aroon.html" class="topiclink">Aroon</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="aroon_oscillator.html" class="topiclink">Aroon Oscillator</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="average_directional_index_adx.html" class="topiclink">Average Directional Index (ADX)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="average_directional_movement_r.html" class="topiclink">Average Directional Movement Rating (ADXR)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="average_true_range_atr.html" class="topiclink">Average True Range (ATR)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="balance_of_power_bop.html" class="topiclink">Balance of Power (BOP)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="block_volume.html" class="topiclink">Block Volume</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="bollinger_bands.html" class="topiclink">Bollinger Bands</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="buysellpressure.html" class="topiclink">BuySell Pressure</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="buysellvolume.html" class="topiclink">BuySell Volume</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="camarilla_pivots.html" class="topiclink">Camarilla Pivots</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="candlestickpattern.html" class="topiclink">CandleStickPattern</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="chaikin_money_flow.html" class="topiclink">Chaikin Money Flow</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="chaikin_oscillator.html" class="topiclink">Chaikin Oscillator</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="chaikin_volatility.html" class="topiclink">Chaikin Volatility</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="chande_momentum_oscillator_cmo.html" class="topiclink">Chande Momentum Oscillator (CMO)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="choppiness_index.html" class="topiclink">Choppiness Index</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="commodity_channel_index_cci.html" class="topiclink">Commodity Channel Index (CCI)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="correlation.html" class="topiclink">Correlation</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="current_day_ohl.html" class="topiclink">Current Day OHL</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="darvas.html" class="topiclink">Darvas</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="directional_movement_dm.html" class="topiclink">Directional Movement (DM)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="directional_movement_index_dmi.html" class="topiclink">Directional Movement Index (DMI)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="disparity_index.html" class="topiclink">Disparity Index</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="donchian_channel.html" class="topiclink">Donchian Channel</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="double_stochastics.html" class="topiclink">Double Stochastics</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="dynamic_momentum_index_dmindex.html" class="topiclink">Dynamic Momentum Index (DMIndex)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="ease_of_movement.html" class="topiclink">Ease of Movement</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="fibonacci_pivots.html" class="topiclink">Fibonacci Pivots</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="fisher_transform.html" class="topiclink">Fisher Transform</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="forecast_oscillator_fosc.html" class="topiclink">Forecast Oscillator (FOSC)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="keltner_channel.html" class="topiclink">Keltner Channel</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="keyreversaldown.html" class="topiclink">KeyReversalDown</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="keyreversalup.html" class="topiclink">KeyReversalUp</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="linear_regression.html" class="topiclink">Linear Regression</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="linear_regression_intercept.html" class="topiclink">Linear Regression Intercept</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="linear_regression_slope.html" class="topiclink">Linear Regression Slope</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="maenvelopes.html" class="topiclink">MA Envelopes</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="maximum_max.html" class="topiclink">Maximum (MAX)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="minimum_min.html" class="topiclink">Minimum (MIN)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="momentum.html" class="topiclink">Momentum</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="money_flow_index_mfi.html" class="topiclink">Money Flow Index (MFI)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="moving_average_-_double_expone.html" class="topiclink">Moving Average - Double Exponential (DEMA)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="moving_average_-_exponential_e.html" class="topiclink">Moving Average - Exponential (EMA)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="moving_average_-_hull_hma.html" class="topiclink">Moving Average - Hull (HMA)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="moving_average_-_kaufmans_adap.html" class="topiclink">Moving Average - Kaufman's Adaptive (KAMA)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="moving_average_-_mesa_adaptive.html" class="topiclink">Moving Average - Mesa Adaptive (MAMA)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="moving_average_-_simple_sma.html" class="topiclink">Moving Average - Simple (SMA)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="moving_average_-_t3_t3.html" class="topiclink">Moving Average - T3 (T3)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="moving_average_-_triangular_tm.html" class="topiclink">Moving Average - Triangular (TMA)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="moving_average_-_triple_expone.html" class="topiclink">Moving Average - Triple Exponential (TEMA)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="moving_average_-_triple_expon2.html" class="topiclink">Moving Average - Triple Exponential (TRIX)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="moving_average_-_variable_vma.html" class="topiclink">Moving Average - Variable (VMA)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="moving_average_-_volume_weight.html" class="topiclink">Moving Average - Volume Weighted (VWMA)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="moving_average_-_weighted_wma.html" class="topiclink">Moving Average - Weighted (WMA)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="moving_average_-_zero_lag_expo.html" class="topiclink">Moving Average - Zero Lag Exponential (ZLEMA)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="moving_average_convergence-divergence_macd.html" class="topiclink">Moving Average Convergence-Divergence (MACD)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="moving_average_ribbon.html" class="topiclink">Moving Average Ribbon</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="net_change_display.html" class="topiclink">Net Change Display</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="n_bars_down.html" class="topiclink">n Bars Down</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="n_bars_up.html" class="topiclink">n Bars Up</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="on_balance_volume_obv.html" class="topiclink">On Balance Volume (OBV)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="order_flow_cumulative_delta2.html" class="topiclink">Order Flow Cumulative Delta</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="order_flow_volumetric_bars2.html" class="topiclink">Order Flow Volumetric Bars</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="order_flow_vwap2.html" class="topiclink">Order Flow VWAP</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="parabolic_sar.html" class="topiclink">Parabolic SAR</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="percentage_price_oscillator_pp.html" class="topiclink">Percentage Price Oscillator (PPO)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="pivots.html" class="topiclink">Pivots</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="polarized_fractal_efficiency_p.html" class="topiclink">Polarized Fractal Efficiency (PFE)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="price_oscillator.html" class="topiclink">Price Oscillator</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="prior_day_ohlc.html" class="topiclink">Prior Day OHLC</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="psychological_line.html" class="topiclink">Psychological Line</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="range.html" class="topiclink">Range</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="range_indicator_rind.html" class="topiclink">Range Indicator (RIND)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="rate_of_change_roc.html" class="topiclink">Rate of Change (ROC)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="regression_channel.html" class="topiclink">Regression Channel</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="relative_spread_strength_rss.html" class="topiclink">Relative Spread Strength (RSS)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="relative_strength_index_rsi.html" class="topiclink">Relative Strength Index (RSI)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="relative_vigor_index.html" class="topiclink">Relative Vigor Index</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="relative_volatility_index_rvi.html" class="topiclink">Relative Volatility Index (RVI)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="r_squared.html" class="topiclink">R-squared</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="standard_deviation_stddev.html" class="topiclink">Standard Deviation (StdDev)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="standard_error_stderror.html" class="topiclink">Standard Error (StdError)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="stochastics.html" class="topiclink">Stochastics</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="stochastics_fast.html" class="topiclink">Stochastics Fast</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="stochastics_rsi_stochrsi.html" class="topiclink">Stochastics RSI (StochRSI)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="summation_sum.html" class="topiclink">Summation (SUM)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="swing.html" class="topiclink">Swing</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="time_series_forecast_tsf.html" class="topiclink">Time Series Forecast (TSF)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="trend-lines.html" class="topiclink">Trend Lines</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="true_strength_index_tsi.html" class="topiclink">True Strength Index (TSI)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="ultimate_oscillator.html" class="topiclink">Ultimate Oscillator</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="volume.html" class="topiclink">Volume (VOL)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="volume_moving_average_volma.html" class="topiclink">Volume Moving Average (VOLMA)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="volume_oscillator.html" class="topiclink">Volume Oscillator</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="volume_rate_of_change_vroc.html" class="topiclink">Volume Rate of Change (VROC)</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="volume_up_down.html" class="topiclink">Volume Up Down</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="vortex.html" class="topiclink">Vortex</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="williams_r.html" class="topiclink">Williams %R</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="wiseman_alligator.html" class="topiclink">Wiseman Alligator</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="wiseman_awesome_oscillator.html" class="topiclink">Wiseman Awesom Oscillator</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="woodies_cci.html" class="topiclink">Woodies CCI</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="woodies_pivots.html" class="topiclink">Woodies Pivots</a></p><p class="p_Normal" style="text-indent: 0; padding-left: 13px; margin-left: 0;"><span class="f_Normal" style="font-family: 'Tahoma';display:inline-block;width:13px;margin-left:-13px">&#8250;</span><a href="zigzag.html" class="topiclink">ZigZag</a></p>
+        <!--ZOOMSTOP-->
+      </div>
+      <script type="text/javascript">
+      
+      var lastSlashPos = document.URL.lastIndexOf("https://ninjatrader.com/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("https://ninjatrader.com/") : document.URL.lastIndexOf("\\");
+      if (document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh") {
+      if (document.all) setTimeout(function() {
+      nsrInit();
+      }, 20);
+      else nsrInit();
+      }
+      
+      
+      if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) {
+      $('.sync-toc').show();
+      $('p.crumbs').hide();
+      }
+      
+      
+      </script>
+      <div id="bump" style="height: 25px"></div>
+    </body>
+  
+<!-- Mirrored from ninjatrader.com/support/helpGuides/nt8/indicators.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Jan 2023 19:58:55 GMT -->
+</html>

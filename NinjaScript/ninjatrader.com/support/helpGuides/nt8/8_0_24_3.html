@@ -1,0 +1,999 @@
+﻿<!DOCTYPE html>
+<html>
+  
+<!-- Mirrored from ninjatrader.com/support/helpGuides/nt8/8_0_24_3.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Jan 2023 19:44:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Release Notes &gt; 8.0.24.3</title>
+    <meta name="generator" content="Help &amp; Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link type="text/css" href="default.css" rel="stylesheet" />
+    <link type="text/css" href="custom.css" rel="stylesheet">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="nt_custom.js"></script>
+    <style TYPE="text/css" media="screen">
+    html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #FFFFFF;
+    line-height: 1.15
+    }
+    
+    div#printheader {
+    display: none
+    }
+    #idheader {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0
+    }
+    #idcontent {
+    position: relative
+    }
+    #callout-table, #overview-table {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0
+    }
+    #callout-icon {
+    display: block;
+    position: absolute;
+    top: -11px;
+    left: -11px
+    }
+    #callout-icon-flag {
+    display: block;
+    position: absolute;
+    top: -11px;
+    left: -8px
+    }
+    #callout-table a {
+    text-decoration: none;
+    color: blue
+    }
+    #callout-table a:visited {
+    text-decoration: none;
+    color: blue
+    }
+    #overview-table a {
+    text-decoration: none;
+    color: black
+    }
+    #overview-table a:visited {
+    text-decoration: none;
+    color: black
+    }
+    #callout-table a:hover, #overview-table a:hover {
+    text-decoration: underline
+    }
+    #switchtoggles {
+    text-align: right;
+    padding: 0 5px 0 0;
+    font-size: 90%
+    }
+    p.help-url {
+    margin: 20px 0 5px 0;
+    text-align: center;
+    font-size: 80%;
+    text-decoration: none
+    }
+    .sync-toc {
+    color: #ffffff;
+    font-size: 8pt;
+    font-weight: bold;
+    display: none
+    }
+    .sync-toc a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold
+    }
+    .sync-toc a:visited {
+    color: #ffffff
+    }
+    .sync-toc a:hover {
+    text-decoration: underline
+    }
+    .p_ToggleHeading:active {
+    box-shadow: 0px 0px 4px #9ecaed
+    }                    
+    .Needs {
+      border-color: #008000 !important;
+      background-color: #f3f9f4;
+    }
+    .Under {
+      border-color: #ffcc00 !important;
+      background-color: #fffdf6;
+    }
+    </style>
+    <noscript>
+    <style type="text/css">
+    html, body { overflow: auto; }
+    </style>
+    </noscript>
+    <style type="text/css" media="print">
+    span.f_Heading1 { color: black; }
+    #idheader, #printheader img { display:none; }
+    #printheader { display: block; margin-top: 20px; }
+    #idcontent { margin-top: 10px; position:relative }
+    </style>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="helpman_settings.js"></script>
+    <script type="text/javascript" src="helpman_topicinit.js"></script>
+    <script type="text/javascript" src="nsh.js"></script>
+    
+    
+    
+  
+   <script type="text/javascript">
+     HMSyncTOC("NT%20HelpGuide%20English.html", "8_0_24_3.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+  <body>
+    
+    
+    
+    <div id="printheader"><p class="p_HeadingTopic"><span class="f_HeadingTopic">8.0.24.3</span></p>
+</div>
+    <div id="idheader">
+      <div id="idheaderbg">
+        <table style="width:100%;border:none;margin:0px;background:#A41E22" cellspacing="0" cellpadding="0">
+          <tr valign="bottom">
+            <td align="left" valign="bottom" class="topichead">
+              <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="NT%20HelpGuide%20Englishddf6.html?8_0_24_3.htm" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+              <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+                
+              <a href="release_notes.html">Release Notes</a>&nbsp;&gt;</p>
+              <p class="p_HeadingTopic"><span class="f_HeadingTopic">8.0.24.3</span></p>
+
+            </td>
+            <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+              
+              <a href="8_0_25_0.html"><img name="prev" src="leftArrow.png" border=0 alt="Previous page"></a>
+              
+              <a href="release_notes.html"><img name=main src="upArrow.png" border=0 alt="Return to chapter overview"></a>
+              <a href="8_0_23_2.html"><img name=next src="rightArrow.png" border=0 alt="Next page"></a>
+              
+            </td>
+          </tr>
+        </table>
+<!-- PM review header         
+        <div id="status" class="" style="margin-bottom: 0px; min-height: 25px;font-size: small; border-bottom: solid 3px;  padding: 5px;">
+          <b></b>: <span id="explain"></span>
+        </div>
+-->        
+        <!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+        
+      </div>
+    </div>
+    
+    <div id="idcontent">
+      <div id="innerdiv">
+        <!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser -->
+        <!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+        
+        <!--ZOOMRESTART-->
+        <p class="p_Normal"><span class="f_Heading2">8.0.24.3 Release Date</span></p>
+<p class="p_Normal">June 15th, 2021</p>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.38; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="width:80%; background-color:#ffffff; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p class="p_Normal"><span style="font-weight: bold;">Issue #</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Status</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Category</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Comments</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14908</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">FXCM</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Updated to latest ForexConnect API to support https connect points</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14946</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Workspaces</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Overwriting existing workspace could be incomplete</span></h2>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading2">8.0.24.2 Release Date</span></p>
+<p class="p_Normal">April 1, 2021</p>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.38; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="width:80%; background-color:#ffffff; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p class="p_Normal"><span style="font-weight: bold;">Issue #</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Status</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Category</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Comments</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14836</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Added</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Rithmic</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Added the ability to connect with futures.de</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14870</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Strategy Builder</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Could not use Set for Period input on indicators</span></h2>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading2">8.0.24.1 Release Date</span></p>
+<p class="p_Normal">March 12, 2021</p>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.38; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="width:80%; background-color:#ffffff; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p class="p_Normal"><span style="font-weight: bold;">Issue #</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Status</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Category</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Comments</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14854</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Strategy</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Intermittently CloseStrategy() did not close positions</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14861</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Strategy Builder</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Reopening a strategy and editing it's actions resulted in an error</span></h2>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Heading2">8.0.24.0 Release Date</span></p>
+<p class="p_Normal">March 10, 2021</p>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.38; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="width:80%; background-color:#ffffff; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:top; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p class="p_Normal"><span style="font-weight: bold;">Features</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:10px; border:solid thin #dddddd;"><p class="p_Normal"><span style="font-weight: bold;">Enhancements to take advantage of additional levels of depth</span></p>
+<p class="p_Normal">SuperDOM, Depth Chart, Order Flow +</p>
+<p class="p_Normal">Feature #14781</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><img alt="r24depth" width="1132" height="507" style="margin:0;width:1132px;height:507px;border:none" src="r24depth.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Order Flow Market Depth Map had a setting added called <span class="f_Menu">Number of levels to track</span>, which can be configured to track more than the default 10 levels of depth.</p>
+<p class="p_Normal">Depth Chart now is enabled for futures and cryptocurrency instruments.</p>
+<p class="p_Normal">SuperDOM columns performance has been enhanced to handle more levels of depth.</p>
+<p class="p_Normal">Multiple data providers offer more than 10 levels of depth. NinjaTrader Continuum &amp; CQG have begun adding more levels of depth on popular instruments.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p class="p_Normal"><span style="font-weight: bold;">Multiple workspaces will open at startup only when opted in to do so</span></p>
+<p class="p_Normal">Workspaces</p>
+<p class="p_Normal">Feature #14761</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><img alt="r24workspaces" width="853" height="302" style="margin:0;width:853px;height:302px;border:none" src="r24workspaces.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">One of the main causes of increased resources being used is multiple workspaces running at the same time and most people don't even realize that is occurring. To help boost performance, NinjaTrader now will only open multiple workspaces at start up for users who opt into doing so. No action is needed to only open 1 workspace at start up. To opt in for multiple workspaces, go to the <span class="f_Menu">Control Center</span>&gt; <span class="f_Menu">General</span> and enable <span class="f_Menu">Reopen all previously open workspaces at startup</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:10px; border:solid thin #dddddd;"><p class="p_Normal"><span style="font-weight: bold;">Commissions template values can now be applied to Realized PnL</span></p>
+<p class="p_Normal">Commissions</p>
+<p class="p_Normal">Feature #14726</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><img alt="r24realized" width="960" height="302" style="margin:0;width:960px;height:302px;border:none" src="r24realized.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Viewing realized PnL when flat from your order entry windows can now be shown in Gross realized PnL or Total PnL. Within order entry windows, the property previously named <span class="f_Menu">Show gross realized PnL when flat</span> has been renamed to <span class="f_Menu">Show realized PnL when flat</span>. By default it will continue to show Gross realized PnL. To show Total PnL, within the <span class="f_Menu">Control Center</span> go to <span class="f_Menu">Tools</span>&gt; <span class="f_Menu">Trading</span> and enable <span class="f_Menu">Use total PnL for Show realized PnL when flat</span>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.38; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="width:80%; background-color:#ffffff; border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p class="p_Normal"><span style="font-weight: bold;">Issue #</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Status</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Category</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Comments</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14785</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Alerts</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Alerts Log filter was not filtering</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14765</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">ATM Strategies</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Close operation failed with MIT targets</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14777</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">ATM Strategies</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">ATM stop strategy template could disappear and ATM reverted to Custom after an hour of inactivity</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14675</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Chart</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Global Cross-hair did not update with small movements</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14688</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Chart</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Duplicating Chart Window then quickly closing via task bar resulted in an error</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14697</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Chart</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Renko bars failed to draw on Volumetric charts</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14705</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Changed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Chart</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Charts could not be panned when Center price on scale was used, now it will disable so that it can be panned</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14706</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Chart</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Opening a new chart with a template applied prevented the chart from showing it was loading</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14762</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Chart</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Indicator Displacement caused chart to scale incorrectly </span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14662</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Chart Trader</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Pressing escape did not cancel an order move operation</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14692</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Chart Trader</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Using Display selected ATM strategy only did not show all orders when ATM selection was set to None</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14693</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Chart Trader</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Positions markers did not display in fractions for instruments quoted in fractions</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14751</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Chart, DrawingTools</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Placing a draw object then changing instrument then changing instrument back to original did not show that draw object.</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14747</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Chart, DrawingTools</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Drawing objects placed on a holiday in the future could display on the wrong bar</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14749</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Chart, NinjaScript</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">RemoveDrawObjects did not remove global draw objects if chart using indicator was on background tab</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14811</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Connections</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Migrating NinjaTrader 7 connections could result in duplicate Kinetick EOD connections</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14770</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Control Center</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Connection status stayed green in Accounts tab when disconnected</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14774</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Control Center</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Restoring English Workspace in German resulted in an error</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14739</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Database</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Some instruments had incorrect information after resetting instruments</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14769</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Database</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Realized PnL could show previous value if new value was not received</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14789</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">FXCM</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Realized PnL in accounts tab could report incorrectly</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14808</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Indicator</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Woodies Pivots line widths settings did not work</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14795</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Instruments</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Futures instruments could be created without any contract months defined</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14736</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Interactive Brokers</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Disconnects from overnight prevented real-time data from coming in</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14763</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Interactive Brokers</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Incorrect settings in Traders Workstation could cause space-bar to be entered repeatedly</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14779</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Interactive Brokers</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Resolved some instruments that showed with the wrong contract month</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14750</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">IQFeed, Data</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Volume for indexes did not update in real-time</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14752</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Kinetick</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Instruments on NASDAQCM caused a disconnect/reconnect loop</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14754</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Kinetick, Chart</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Bid/ask/last tick data on the same panel could plot incorrectly</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14696</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Kinetick, Chart</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Reloading data could result in missing bid/ask tick data</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14440</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Licensing</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Timezone affected free trial start/end date for 3rd party add-ons</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14689</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Localization</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Resolved an error that occurred when adjusting some settings after setting the language to Spanish</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14690</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Localization, Alerts</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Alerts with @Nombre in the Text field would not save when language was set to Spanish</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:20px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14687</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:20px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:20px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">NinjaScript, DrawingTool</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:20px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Draw.TextFixed opacity could no longer change if set to 90% or greater</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14707</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">NinjaScript, Rithmic</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Account.PositionUpdate did not show flat positions for Rithmic</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14606</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Changed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Options</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Simulation accounts now always calculate as FIFO and the FIFO setting was removed since it only affected simulation accounts</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14621</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Order Flow +</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Order Flow Volume Profile week/month started on wrong day for some timezones</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14701</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Order Flow +</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Order Flow Volume Profile using a week profile period did not display correctly with additional data series</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14766</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Order Flow +</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Order Flow Market Depth property, Number of levels to track, did not persist with workspace change</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14745</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Order Flow +, Indicators</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Various indicators with weekly or monthly reset now match logic for weekly/monthly bars</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14744</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Playback, Strategy</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Rewinding Playback caused strategy indicators to be removed</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14778</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Playback, Strategy</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Adding a 1 tick series to a strategy would only pull 5 days of data for the historical tick series when applied in Playback</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14814</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Regionalization</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Italian language resources updated</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14682</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Strategy, Chart</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Repeatedly enabling then disabling strategy could cause chart to lockup</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14188</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Strategy</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Disconnected accounts were listed in the Account drop-down of the Strategy window</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14708</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Strategy</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Resolved a scenario where a strategy could show multiple times on the Strategies tab</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14710</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Strategy</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Resolved a case where an error in OnExecutionUpdate was not handled properly</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14742</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Strategy</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Connection loss could result in a disabled strategy showing as enabled</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14771</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Strategy</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Resolved a scenario where a rejected modified order did not stop the strategy since the order was rolled back</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14799</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Strategy</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">ExitOnSessionClose did not execute on last session of chart if market was open</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14801</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Strategy Analyzer</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Attempting to view Walk Forward Optimization results in a new instance of the Strategy Analyzer caused an error on next run</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14632</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Strategy Builder</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Indicators without plots incorrectly showed as available</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14746</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Done</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Strategy Builder</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">User inputs could prevent entering value in some situations</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14773</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Strategy Builder</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Numeric value was missing for order submission quantity</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14775</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Strategy Builder</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Offset field could become disabled</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14796</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Strategy Builder</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Resolved some scenarios of user inputs not being able to be entered/modified as expected</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14792</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Strategy, Chart</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Strategy using AddChartIndicator left indicators on chart when calling CloseStrategy</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14802</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Strategy, Trade Performance</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Strategy Performance window did not close when strategy was disabled in chart</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14643</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">TD Ameritrade</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Resolved a scenario where an error resulted in real-time data not coming in</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14664</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">TD Ameritrade</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Buying power was not displaying</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14673</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Workspaces</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Workspace changes were not saved when exiting if a workspace was restored and then it's name was too long</span></h2>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:108px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><p style="text-align: right; line-height: 1.20;"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">14696</span></p>
+</td>
+<td style="vertical-align:top; width:132px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Fixed</span></h2>
+</td>
+<td style="vertical-align:top; width:135px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Chart, Workspaces</span></h2>
+</td>
+<td style="vertical-align:top; width:1173px; height:19px; background-color:#F9F9F9; padding:10px; border:solid thin #dddddd;"><h2 class="p_Heading2"><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Workspace couldn't load some instruments on charts if database was deleted</span></h2>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><span class="f_Heading2">&nbsp;</span></h2>
+
+        <!--ZOOMSTOP-->
+      </div>
+      <script type="text/javascript">
+      
+      var lastSlashPos = document.URL.lastIndexOf("https://ninjatrader.com/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("https://ninjatrader.com/") : document.URL.lastIndexOf("\\");
+      if (document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh") {
+      if (document.all) setTimeout(function() {
+      nsrInit();
+      }, 20);
+      else nsrInit();
+      }
+      
+      
+      if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) {
+      $('.sync-toc').show();
+      $('p.crumbs').hide();
+      }
+      
+      
+      </script>
+      <div id="bump" style="height: 25px"></div>
+    </body>
+  
+<!-- Mirrored from ninjatrader.com/support/helpGuides/nt8/8_0_24_3.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Jan 2023 19:44:36 GMT -->
+</html>
